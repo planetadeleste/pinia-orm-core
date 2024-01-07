@@ -2,9 +2,9 @@
   "name": "@planetadeleste/pinia-orm-core",
   "version": "1.0.0",
   "description": "",
-  "repository":{
+  "repository": {
     "type": "git",
-    "url": "git+https://github.com/planetadeleste/pinia-orm-core.git"
+    "url": "https://github.com/planetadeleste/pinia-orm-core.git"
   },
   "license": "MIT",
   "sideEffects": false,
@@ -53,5 +53,8 @@
     "pinia": "^2.1.7",
     "pinia-orm": "^1.7.2",
     "uuid": "^9.0.1"
+  },
+  "peerDependencies": {
+    "axios": "^1.6.5"
   }
 }
