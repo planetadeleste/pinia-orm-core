@@ -1,3 +1,1 @@
-export function test() {
-  return "works!";
-}
+export { default as Model } from "./Model";

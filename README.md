@@ -1,11 +1,11 @@
-# packageName
+# @planetadeleste/pinia-orm-core
 
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![bundle][bundle-src]][bundle-href]
 [![Codecov][codecov-src]][codecov-href]
 
-This is my package description.
+Model extends [pinia-orm](https://github.com/CodeDredd/pinia-orm) base model
 
 ## Usage
 
@@ -13,35 +13,27 @@ Install package:
 
 ```sh
 # npm
-npm install packageName
+npm install @planetadeleste/pinia-orm-core
 
 # yarn
-yarn add packageName
+yarn add @planetadeleste/pinia-orm-core
 
 # pnpm
-pnpm install packageName
+pnpm install @planetadeleste/pinia-orm-core
 
 # bun
-bun install packageName
+bun install @planetadeleste/pinia-orm-core
 ```
 
 Import:
 
 ```js
 // ESM
-import {} from "packageName";
+import Model from "@planetadeleste/pinia-orm-core";
 
 // CommonJS
-const {} = require("packageName");
+const Model = require("@planetadeleste/pinia-orm-core");
 ```
-
-## Development
-
-- Clone this repository
-- Install latest LTS version of [Node.js](https://nodejs.org/en/)
-- Enable [Corepack](https://github.com/nodejs/corepack) using `corepack enable`
-- Install dependencies using `pnpm install`
-- Run interactive tests using `pnpm dev`
 
 ## License
 

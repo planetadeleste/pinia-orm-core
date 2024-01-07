@@ -1,4 +1,7 @@
 {
   "extends": ["eslint-config-unjs"],
-  "rules": {}
+  "rules": {
+    "unicorn/filename-case": "off",
+    "@typescript-eslint/consistent-type-imports": "error"
+  }
 }

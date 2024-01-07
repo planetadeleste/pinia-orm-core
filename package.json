@@ -1,8 +1,11 @@
 {
-  "name": "packageName",
-  "version": "0.0.0",
+  "name": "@planetadeleste/pinia-orm-core",
+  "version": "1.0.0",
   "description": "",
-  "repository": "unjs/packageName",
+  "repository":{
+    "type": "git",
+    "url": "git+https://github.com/planetadeleste/pinia-orm-core.git"
+  },
   "license": "MIT",
   "sideEffects": false,
   "type": "module",
@@ -31,7 +34,9 @@
     "test:types": "tsc --noEmit --skipLibCheck"
   },
   "devDependencies": {
+    "@types/lodash": "^4.14.202",
     "@types/node": "^20.10.5",
+    "@types/uuid": "^9.0.7",
     "@vitest/coverage-v8": "^1.1.0",
     "changelogen": "^0.5.5",
     "eslint": "^8.56.0",
@@ -42,5 +47,11 @@
     "unbuild": "^2.0.0",
     "vitest": "^1.1.0"
   },
-  "packageManager": "pnpm@8.12.1"
+  "packageManager": "pnpm@8.12.1",
+  "dependencies": {
+    "lodash": "^4.17.21",
+    "pinia": "^2.1.7",
+    "pinia-orm": "^1.7.2",
+    "uuid": "^9.0.1"
+  }
 }
