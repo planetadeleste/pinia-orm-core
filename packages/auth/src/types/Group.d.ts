@@ -1,7 +1,8 @@
 export interface GroupData {
-	id: number;
-	name: string;
-	description: string;
-	created_at: string;
-	updated_at: string;
+  id: number | string;
+  name: string;
+  code: string;
+  description: string;
+  created_at?: string;
+  updated_at?: string;
 }
