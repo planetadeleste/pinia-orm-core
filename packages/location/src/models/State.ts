@@ -2,6 +2,7 @@ import Model from "@planetadeleste/pinia-orm-core";
 import type { ModelFields } from "pinia-orm";
 import type { StateData } from "../types";
 import Country from "./Country";
+import Town from "./Town";
 
 class State extends Model<StateData> {
   static entity = "sha_states";
@@ -18,6 +19,7 @@ class State extends Model<StateData> {
       created_at: this.attr(null),
       updated_at: this.attr(null),
       country: this.belongsTo(Country, "country_id"),
+      towns: this.hasMany(Town, "state_id"),
     };
   }
 }

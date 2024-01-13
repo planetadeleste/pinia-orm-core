@@ -1,4 +1,5 @@
 import type { CountryData } from "./Country";
+import type { TownData } from "./Town";
 
 export interface StateData {
   id: number | string;
@@ -7,4 +8,5 @@ export interface StateData {
   code: string;
   is_default: boolean;
   country: CountryData;
+  towns: TownData[];
 }

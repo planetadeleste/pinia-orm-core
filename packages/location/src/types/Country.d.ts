@@ -1,3 +1,5 @@
+import type { StateData } from "./State";
+
 export interface CountryData {
   id: number | string;
   name: string;
@@ -5,4 +7,5 @@ export interface CountryData {
   is_pinned: boolean;
   is_enabled: boolean;
   is_default: boolean;
+  states: StateData[];
 }
