@@ -1,4 +1,6 @@
-import type { FileData }    from "@planetadeleste/pinia-orm-core";
+import type { AxiosRepository, Request } from "@pinia-orm/axios";
+import type { Result, FileData } from "@planetadeleste/pinia-orm-core";
+import type { AxiosResponse } from "axios";
 import type Category from "../models/Category";
 
 export interface CategoryData {
@@ -17,4 +19,13 @@ export interface CategoryData {
   description: string;
   external_id: string;
   children: Category[];
+}
+
+export interface CategoryAxiosRepository extends Request {
+  list(): Promise<AxiosResponse<Result<CategoryData[]>>>;
+  tree(): Promise<AxiosResponse<Result<CategoryData[]>>>;
+}
+
+export interface CategoryApiAxiosRepository extends AxiosRepository<Category> {
+  api(): CategoryAxiosRepository;
 }

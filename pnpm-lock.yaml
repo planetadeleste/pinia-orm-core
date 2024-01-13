@@ -149,6 +149,12 @@ importers:
 
   packages/shopaholic:
     dependencies:
+      '@pinia-orm/axios':
+        specifier: ^1.7.0
+        version: 1.7.0(axios@1.6.5)(pinia-orm@1.7.2)
+      axios:
+        specifier: ^1.6.5
+        version: 1.6.5
       pinia-orm:
         specifier: ^1.7.2
         version: 1.7.2(pinia@2.1.7)
