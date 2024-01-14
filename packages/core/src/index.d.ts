@@ -66,7 +66,7 @@ interface Model<T extends Element = Element> extends BaseModel {
   uuid: boolean;
 }
 
-export declare class Model<T extends Element = Element> extends BaseModel {
+export declare class Model extends BaseModel {
   static baseUrl: string;
   static uuid: boolean;
 
