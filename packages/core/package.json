@@ -1,8 +1,7 @@
 {
-  "name": "@planetadeleste/pinia-orm-root",
-  "version": "1.0.0",
+  "name": "@planetadeleste/pinia-orm-core",
+  "version": "1.0.1",
   "description": "",
-  "private": true,
   "repository": {
     "type": "git",
     "url": "https://github.com/planetadeleste/pinia-orm-core.git"

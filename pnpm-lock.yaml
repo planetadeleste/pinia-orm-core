@@ -75,10 +75,65 @@ importers:
     devDependencies:
       '@planetadeleste/pinia-orm-core':
         specifier: workspace:*
-        version: link:../..
+        version: link:../core
       '@types/node':
         specifier: ^20.10.5
         version: 20.10.6
+      '@vitest/coverage-v8':
+        specifier: ^1.1.0
+        version: 1.1.3(vitest@1.1.3)
+      changelogen:
+        specifier: ^0.5.5
+        version: 0.5.5
+      eslint:
+        specifier: ^8.56.0
+        version: 8.56.0
+      eslint-config-unjs:
+        specifier: ^0.2.1
+        version: 0.2.1(eslint@8.56.0)(typescript@5.3.3)
+      jiti:
+        specifier: ^1.21.0
+        version: 1.21.0
+      prettier:
+        specifier: ^3.1.1
+        version: 3.1.1
+      typescript:
+        specifier: ^5.3.3
+        version: 5.3.3
+      unbuild:
+        specifier: ^2.0.0
+        version: 2.0.0(typescript@5.3.3)
+      vitest:
+        specifier: ^1.1.0
+        version: 1.1.3(@types/node@20.10.6)
+
+  packages/core:
+    dependencies:
+      axios:
+        specifier: ^1.6.5
+        version: 1.6.5
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
+      pinia:
+        specifier: ^2.1.7
+        version: 2.1.7(typescript@5.3.3)(vue@3.4.5)
+      pinia-orm:
+        specifier: ^1.7.2
+        version: 1.7.2(pinia@2.1.7)
+      uuid:
+        specifier: ^9.0.1
+        version: 9.0.1
+    devDependencies:
+      '@types/lodash':
+        specifier: ^4.14.202
+        version: 4.14.202
+      '@types/node':
+        specifier: ^20.10.5
+        version: 20.10.6
+      '@types/uuid':
+        specifier: ^9.0.7
+        version: 9.0.7
       '@vitest/coverage-v8':
         specifier: ^1.1.0
         version: 1.1.3(vitest@1.1.3)
@@ -115,7 +170,7 @@ importers:
     devDependencies:
       '@planetadeleste/pinia-orm-core':
         specifier: workspace:*
-        version: link:../..
+        version: link:../core
       '@types/node':
         specifier: ^20.10.5
         version: 20.10.6
@@ -161,7 +216,7 @@ importers:
     devDependencies:
       '@planetadeleste/pinia-orm-core':
         specifier: workspace:*
-        version: link:../..
+        version: link:../core
       '@types/node':
         specifier: ^20.10.6
         version: 20.10.6
