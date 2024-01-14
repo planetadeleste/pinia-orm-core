@@ -18,20 +18,30 @@ class Auth extends Model {
     axiosApi: {
       actions: {
         async check(this: Request) {
-          const obResponse = await this.post(`${Auth.baseUrl}/check`);
+          const obResponse = await this.post(
+            `${Auth.baseUrl}/check`,
+            {},
+            { save: false }
+          );
           return obResponse.response as AxiosResponse<Result<ResponseCheck>>;
         },
 
         async csrf(this: Request) {
-          const obResponse = await this.get(`${Auth.baseUrl}/csrf`);
+          const obResponse = await this.get(`${Auth.baseUrl}/csrf`, {
+            save: false,
+          });
           return obResponse.response as AxiosResponse<Result<ResponseCsrf>>;
         },
 
         async login(this: Request, email: string, password: string) {
-          const obResponse = await this.post(`${Auth.baseUrl}/login`, {
-            email,
-            password,
-          });
+          const obResponse = await this.post(
+            `${Auth.baseUrl}/login`,
+            {
+              email,
+              password,
+            },
+            { save: false }
+          );
           return obResponse.response as AxiosResponse<
             Result<ResponseLoginRegisterData>
           >;
@@ -40,7 +50,8 @@ class Auth extends Model {
         async restorePassword(this: Request, email: string) {
           const obResponse = await this.post(
             `${Auth.baseUrl}/restore_password`,
-            { email }
+            { email },
+            { save: false }
           );
           return obResponse.response as AxiosResponse<Result<null>>;
         },
@@ -58,14 +69,16 @@ class Auth extends Model {
           };
           const obResponse = await this.post(
             `${Auth.baseUrl}/reset_password`,
-            obData
+            obData,
+            { save: false }
           );
           return obResponse.response as AxiosResponse<Result<null>>;
         },
 
         async checkResetCode(this: Request, sCode: string) {
           const obResponse = await this.get(
-            `${Auth.baseUrl}/reset_password/${sCode}`
+            `${Auth.baseUrl}/reset_password/${sCode}`,
+            { save: false }
           );
           return obResponse.response as AxiosResponse<Result<null>>;
         },
@@ -81,7 +94,8 @@ class Auth extends Model {
 
           const obResponse = await this.post(
             `${Auth.baseUrl}/invalidate`,
-            obData
+            obData,
+            { save: false }
           );
           return obResponse.response as AxiosResponse<Result<string>>;
         },
@@ -89,7 +103,8 @@ class Auth extends Model {
         async register(this: Request, obData: Record<string, any>) {
           const obResponse = await this.post(
             `${Auth.baseUrl}/register`,
-            obData
+            obData,
+            { save: false }
           );
           return obResponse.response as AxiosResponse<
             Result<ResponseLoginRegisterData>
@@ -97,7 +112,11 @@ class Auth extends Model {
         },
 
         async refresh(this: Request) {
-          const obResponse = await this.post(`${Auth.baseUrl}/refresh`);
+          const obResponse = await this.post(
+            `${Auth.baseUrl}/refresh`,
+            {},
+            { save: false }
+          );
           return obResponse.response as AxiosResponse<
             Result<ResponseLoginRegisterData>
           >;
