@@ -1,5 +1,5 @@
-import Model from '@planetadeleste/pinia-orm-core';
-import type { AddressData, UserData, GroupData } from './types';
+import { Model } from '@planetadeleste/pinia-orm-core';
+import type { AddressData, GroupData, UserData } from './types';
 
 // USER
 interface User extends UserData {}

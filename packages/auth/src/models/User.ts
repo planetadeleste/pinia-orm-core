@@ -1,7 +1,7 @@
-import Model                from '@planetadeleste/pinia-orm-core';
+import { Model } from '@planetadeleste/pinia-orm-core';
 import type { ModelFields } from 'pinia-orm';
-import type { UserData }    from '../types';
-import Address              from './Address';
+import type { UserData } from '../types';
+import Address from './Address';
 
 class User extends Model<UserData> {
   static entity = 'sha_users';

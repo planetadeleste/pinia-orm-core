@@ -1,6 +1,6 @@
 {
   "name": "@planetadeleste/pinia-orm-auth",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Auth methods",
   "repository": {
     "type": "git",

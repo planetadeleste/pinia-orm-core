@@ -1,4 +1,4 @@
-import Model from '@planetadeleste/pinia-orm-core';
+import { Model } from '@planetadeleste/pinia-orm-core';
 import type { ModelFields } from 'pinia-orm';
 import type { GroupData } from '../types';
 
