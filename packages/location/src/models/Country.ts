@@ -1,9 +1,8 @@
-import Model from "@planetadeleste/pinia-orm-core";
+import { Model } from "@planetadeleste/pinia-orm-core";
 import type { ModelFields } from "pinia-orm";
-import type { TownData } from "../types";
 import State from "./State";
 
-class Country extends Model<TownData> {
+class Country extends Model {
   static entity = "sha_countries";
   static baseUrl = "countries";
   static namespace = "location";

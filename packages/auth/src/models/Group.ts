@@ -1,8 +1,7 @@
 import { Model } from '@planetadeleste/pinia-orm-core';
 import type { ModelFields } from 'pinia-orm';
-import type { GroupData } from '../types';
 
-class Group extends Model<GroupData> {
+class Group extends Model {
   static entity = 'sha_groups';
   static baseUrl = 'groups';
   static namespace = 'auth';

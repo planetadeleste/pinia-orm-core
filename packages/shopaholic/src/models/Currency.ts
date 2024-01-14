@@ -1,9 +1,8 @@
-import Model from "@planetadeleste/pinia-orm-core";
+import { Model } from "@planetadeleste/pinia-orm-core";
 
-import type { ModelFields }  from "pinia-orm";
-import type { CurrencyData } from "../types";
+import type { ModelFields } from "pinia-orm";
 
-class Currency extends Model<CurrencyData> {
+class Currency extends Model {
   static entity = "sha_currencies";
   static baseUrl = "currencies";
   static namespace = "shopaholic";
@@ -19,7 +18,7 @@ class Currency extends Model<CurrencyData> {
       rate: this.attr(null),
       symbol: this.attr(null),
       created_at: this.attr(null),
-      updated_at: this.attr(null)
+      updated_at: this.attr(null),
     };
   }
 }

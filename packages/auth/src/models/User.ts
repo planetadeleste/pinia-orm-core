@@ -1,9 +1,8 @@
 import { Model } from '@planetadeleste/pinia-orm-core';
 import type { ModelFields } from 'pinia-orm';
-import type { UserData } from '../types';
 import Address from './Address';
 
-class User extends Model<UserData> {
+class User extends Model {
   static entity = 'sha_users';
   static baseUrl = 'users';
   static namespace = 'auth';

@@ -1,11 +1,11 @@
 import type { Result } from "@planetadeleste/pinia-orm-core";
-import Model from "@planetadeleste/pinia-orm-core";
+import { Model } from "@planetadeleste/pinia-orm-core";
 import type { Request } from "@pinia-orm/axios";
 import type { ModelFields } from "pinia-orm";
 import type { AxiosResponse } from "axios";
 import type { CategoryData } from "../types";
 
-class Category extends Model<CategoryData> {
+class Category extends Model {
   static entity = "sha_categories";
   static baseUrl = "categories";
   static namespace = "shopaholic";

@@ -1,4 +1,4 @@
-import Model from "@planetadeleste/pinia-orm-core";
+import { Model } from "@planetadeleste/pinia-orm-core";
 import type { TownData, StateData, CountryData } from "./types";
 
 // TOWN

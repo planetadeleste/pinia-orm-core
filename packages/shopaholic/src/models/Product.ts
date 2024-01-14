@@ -1,12 +1,11 @@
-import Model from "@planetadeleste/pinia-orm-core";
+import { Model } from "@planetadeleste/pinia-orm-core";
 
 import type { ModelFields } from "pinia-orm";
-import type { ProductData } from "../types";
-import Brand                from "./Brand";
-import Category             from "./Category";
-import Offer                from "./Offer";
+import Brand from "./Brand";
+import Category from "./Category";
+import Offer from "./Offer";
 
-class Product extends Model<ProductData> {
+class Product extends Model {
   static entity = "sha_products";
   static baseUrl = "products";
   static namespace = "shopaholic";
@@ -32,7 +31,7 @@ class Product extends Model<ProductData> {
       slug: this.attr(null),
       thumbnail: this.attr(null),
       updated_at: this.attr(null),
-      offers: this.hasMany(Offer, "product_id").onDelete("cascade")
+      offers: this.hasMany(Offer, "product_id").onDelete("cascade"),
     };
   }
 }

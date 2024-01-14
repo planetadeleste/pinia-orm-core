@@ -1,10 +1,9 @@
-import Model from "@planetadeleste/pinia-orm-core";
+import { Model } from "@planetadeleste/pinia-orm-core";
 
 import type { ModelFields } from "pinia-orm";
-import type { OfferData }   from "../types";
-import Product              from "./Product";
+import Product from "./Product";
 
-class Offer extends Model<OfferData> {
+class Offer extends Model {
   static entity = "sha_offers";
   static baseUrl = "offers";
   static namespace = "shopaholic";
@@ -32,7 +31,7 @@ class Offer extends Model<OfferData> {
       preview_image: this.string(null),
       images: this.attr(null),
       property: this.attr({}),
-      product: this.belongsTo(Product, "product_id")
+      product: this.belongsTo(Product, "product_id"),
     };
   }
 }

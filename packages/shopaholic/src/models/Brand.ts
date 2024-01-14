@@ -1,8 +1,7 @@
-import Model                from "@planetadeleste/pinia-orm-core";
+import { Model } from "@planetadeleste/pinia-orm-core";
 import type { ModelFields } from "pinia-orm";
-import type { BrandData }   from "../types";
 
-class Brand extends Model<BrandData> {
+class Brand extends Model {
   static entity = "sha_brands";
   static baseUrl = "brands";
   static namespace = "shopaholic";
@@ -22,7 +21,7 @@ class Brand extends Model<BrandData> {
       updated_at: this.attr(null),
       external_id: this.attr(null),
       description: this.attr(null),
-      sort_order: this.attr(0)
+      sort_order: this.attr(0),
     };
   }
 }
