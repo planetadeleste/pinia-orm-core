@@ -34,9 +34,9 @@
     "test:types": "tsc --noEmit --skipLibCheck"
   },
   "devDependencies": {
-    "@planetadeleste/pinia-orm-auth": "workspace:^",
+    "@planetadeleste/pinia-orm-auth": "workspace:*",
     "@planetadeleste/pinia-orm-core": "workspace:*",
-    "@planetadeleste/pinia-orm-shopaholic": "workspace:^",
+    "@planetadeleste/pinia-orm-shopaholic": "workspace:*",
     "@types/node": "^20.10.5",
     "@vitest/coverage-v8": "^1.1.0",
     "changelogen": "^0.5.5",
