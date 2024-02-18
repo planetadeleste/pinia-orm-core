@@ -3,7 +3,7 @@ import type { ModelFields } from "pinia-orm";
 
 class OrderPosition extends Model {
   static entity = "sha_order_position";
-  static baseUrl = "positions";
+  static baseUrl = "orders/positions";
   static namespace = "orders";
 
   static fields(): ModelFields {

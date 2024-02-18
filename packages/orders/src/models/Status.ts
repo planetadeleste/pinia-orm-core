@@ -3,7 +3,7 @@ import type { ModelFields } from "pinia-orm";
 
 class Status extends Model {
   static entity = "sha_status";
-  static baseUrl = "status";
+  static baseUrl = "orders/status";
   static namespace = "orders";
 
   static fields(): ModelFields {
