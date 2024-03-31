@@ -64,6 +64,7 @@ interface Model<T extends Element = Element> extends BaseModel {
   updated_at?: string;
 
   uuid: boolean;
+  baseUrl: string;
 }
 
 export declare class Model extends BaseModel {
@@ -73,4 +74,5 @@ export declare class Model extends BaseModel {
   static creating<M extends Model = Model>(model: M): void;
 
   $isNew(): boolean;
+  $baseUrl(): string;
 }

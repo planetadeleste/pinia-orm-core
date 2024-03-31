@@ -3,7 +3,7 @@ import type { Element } from "pinia-orm";
 import { Model as BaseModel } from "pinia-orm";
 import { v4 } from "uuid";
 
-interface Model<T extends Element = Element> extends BaseModel {
+interface Model extends BaseModel {
   id: string | number;
   baseUrl: string;
   created_at?: string;
@@ -14,7 +14,7 @@ interface Model<T extends Element = Element> extends BaseModel {
   $baseUrl(): string;
 }
 
-class Model<T extends Element = Element> extends BaseModel {
+class Model extends BaseModel {
   static baseUrl: string;
   static uuid = false;
 
