@@ -5,9 +5,13 @@ import { v4 } from "uuid";
 
 interface Model<T extends Element = Element> extends BaseModel {
   id: string | number;
+  baseUrl: string;
   created_at?: string;
   updated_at?: string;
   uuid: boolean;
+
+  $isNew(): boolean;
+  $baseUrl(): string;
 }
 
 class Model<T extends Element = Element> extends BaseModel {
@@ -22,6 +26,10 @@ class Model<T extends Element = Element> extends BaseModel {
 
   $isNew(): boolean {
     return !this.id || startsWith(this.id as string, "-") || !this.created_at;
+  }
+
+  $baseUrl(): string {
+    return this.baseUrl;
   }
 }
 
