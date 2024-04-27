@@ -10,16 +10,16 @@ class OrderPosition extends Model {
     return {
       id: this.attr(""),
       order_id: this.attr(null),
+      item_id: this.attr(null),
+      item_type: this.attr(null),
       code: this.attr(null),
-      currency_code: this.attr(null),
-      currency_symbol: this.attr(null),
       height: this.attr(null),
       length: this.attr(null),
       weight: this.attr(null),
       width: this.attr(null),
       quantity: this.attr(null),
-      offer: this.attr(null),
       price: this.attr(null),
+      property: this.attr({}),
     };
   }
 }

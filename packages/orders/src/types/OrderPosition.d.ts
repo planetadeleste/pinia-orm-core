@@ -3,14 +3,21 @@ import type { OfferData } from "@planetadeleste/pinia-orm-shopaholic";
 export interface OrderPositionData {
   id: number | string;
   order_id: number;
+  item_id: number | string;
+  item_type: string;
   code: string;
-  currency_code: string;
-  currency_symbol: string;
   height: number;
   length: number;
   weight: number;
   width: number;
   quantity: number;
+  property: Record<string, any>;
+  created_at: string;
+  updated_at: string;
+
+  currency_code: string;
+  currency_symbol: string;
+  offer_id: number;
   offer: OfferData;
 
   discount_total_price: number;
