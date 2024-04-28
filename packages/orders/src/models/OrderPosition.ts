@@ -1,5 +1,6 @@
 import { Model } from "@planetadeleste/pinia-orm-core";
 import type { ModelFields } from "pinia-orm";
+import Order from "./Order";
 
 class OrderPosition extends Model {
   static entity = "sha_order_position";
@@ -20,6 +21,8 @@ class OrderPosition extends Model {
       quantity: this.attr(null),
       price: this.attr(null),
       property: this.attr({}),
+
+      order: this.belongsTo(Order, "order_id"),
     };
   }
 }

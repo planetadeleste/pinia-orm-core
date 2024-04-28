@@ -1,4 +1,5 @@
 import type { OfferData } from "@planetadeleste/pinia-orm-shopaholic";
+import type { OrderData } from "./Order";
 
 export interface OrderPositionData {
   id: number | string;
@@ -19,6 +20,7 @@ export interface OrderPositionData {
   currency_symbol: string;
   offer_id: number;
   offer: OfferData;
+  order: OrderData;
 
   discount_total_price: number;
   discount_total_price_per_unit: number;
