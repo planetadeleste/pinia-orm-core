@@ -1,4 +1,4 @@
-import type { AddressData } from "@planetadeleste/pinia-orm-auth";
+import type { AddressData, UserData } from "@planetadeleste/pinia-orm-auth";
 import type { CurrencyData } from "@planetadeleste/pinia-orm-shopaholic";
 import type { StatusData } from "./Status";
 import type { OrderPositionData } from "./OrderPosition";
@@ -24,6 +24,7 @@ export interface OrderData {
   weight: number;
   order_position?: OrderPositionData[];
   currency: CurrencyData;
+  user: UserData;
 
   discount_position_total_price?: string;
   discount_position_total_price_value?: number;

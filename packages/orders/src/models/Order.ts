@@ -1,6 +1,7 @@
 import { Model } from "@planetadeleste/pinia-orm-core";
 import type { ModelFields } from "pinia-orm";
 import { Currency } from "@planetadeleste/pinia-orm-shopaholic";
+import { User } from "@planetadeleste/pinia-orm-auth";
 import Status from "./Status";
 import OrderPosition from "./OrderPosition";
 import ShippingType from "./ShippingType";
@@ -35,6 +36,7 @@ class Order extends Model {
       currency: this.belongsTo(Currency, "currency_id"),
       payment_method: this.belongsTo(PaymentMethod, "payment_method_id"),
       shipping_type: this.belongsTo(ShippingType, "shipping_type_id"),
+      user: this.belongsTo(User, "user_id"),
     };
   }
 }

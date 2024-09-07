@@ -1,6 +1,6 @@
 {
   "name": "@planetadeleste/pinia-orm-location",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "",
   "repository": {
     "type": "git",
@@ -35,20 +35,20 @@
   },
   "devDependencies": {
     "@planetadeleste/pinia-orm-core": "workspace:*",
-    "@types/node": "^20.10.5",
-    "@vitest/coverage-v8": "^1.1.0",
+    "@types/node": "^20.14.2",
+    "@vitest/coverage-v8": "^1.6.0",
     "changelogen": "^0.5.5",
-    "eslint": "^8.56.0",
+    "eslint": "^8.57.0",
     "eslint-config-unjs": "^0.2.1",
-    "jiti": "^1.21.0",
-    "prettier": "^3.1.1",
-    "typescript": "^5.3.3",
+    "jiti": "^1.21.3",
+    "prettier": "^3.3.1",
+    "typescript": "^5.4.5",
     "unbuild": "^2.0.0",
-    "vitest": "^1.1.0"
+    "vitest": "^1.6.0"
   },
   "peerDependencies": {
     "@planetadeleste/pinia-orm-core": "^1.0.0",
     "pinia-orm": "^1.7.2"
   },
-  "packageManager": "pnpm@8.12.1"
+  "packageManager": "pnpm@9.1.1"
 }
