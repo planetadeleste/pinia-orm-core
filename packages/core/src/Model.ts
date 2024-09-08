@@ -1,5 +1,4 @@
 import { isEmpty, startsWith } from "lodash";
-import type { Element } from "pinia-orm";
 import { Model as BaseModel } from "pinia-orm";
 import { v4 } from "uuid";
 
