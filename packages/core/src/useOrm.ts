@@ -15,7 +15,7 @@ import type {
 } from "./types";
 import type { Model } from "./index";
 
-export default function <M extends Model, R extends Request = Request>(
+export function useOrmModel<M extends Model, R extends Request = Request>(
   obModel: Constructor<M>,
 ): fnUseOrmModel<M, R> {
   const repo = useRepo<M>(obModel);
