@@ -1,6 +1,6 @@
 {
   "name": "@planetadeleste/pinia-orm-auth",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Auth methods",
   "repository": {
     "type": "git",
@@ -18,12 +18,12 @@
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "typings": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
+    "build": "tsup",
     "dev": "vitest dev",
     "play": "jiti playground",
     "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src test",
@@ -51,6 +51,5 @@
     "@planetadeleste/pinia-orm-core": "^1.0.0",
     "axios": "^1.6.5",
     "pinia-orm": "^1.7.2"
-  },
-  "packageManager": "pnpm@9.1.1"
+  }
 }
