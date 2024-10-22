@@ -1,4 +1,5 @@
 import type { Collection, Repository } from "pinia-orm";
+import { Type } from "pinia-orm";
 import type { Response as OrmAxiosResponse, Request } from "@pinia-orm/axios";
 import type { AxiosResponse } from "axios";
 import type { ComputedRef, Ref } from "vue";
@@ -95,7 +96,15 @@ declare function useOrmModel<M extends Model, R extends Request = Request>(
   obModel: Constructor<M>,
 ): fnUseOrmModel<M, R>;
 
+declare class Attr extends Type {
+  /**
+   * Make the value for the attribute.
+   */
+  make(value: any): any;
+}
+
 export type {
+  Attr,
   ApiLinksResponse,
   ApiMetaResponse,
   Config,

@@ -1,5 +1,6 @@
-import type { Element, ModelOptions } from "pinia-orm";
+import type { Element, ModelOptions, Relation } from "pinia-orm";
 import { Model as BaseModel } from "pinia-orm";
+import type { Attr } from "./types";
 
 interface Model<T extends Element = Element> extends BaseModel {
   $getOriginal: () => T;
@@ -19,6 +20,7 @@ declare class Model extends BaseModel {
   static uuid: boolean;
 
   static creating<M extends Model = Model>(model: M): void;
+  static fields(): Record<string, Attr | Relation>;
 
   $isNew(): boolean;
 

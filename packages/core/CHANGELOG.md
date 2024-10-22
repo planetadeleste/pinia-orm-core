@@ -2,7 +2,7 @@
 
 
 ## v1.0.9
-
+- Fix types
 
 ### 🏡 Chore
 
