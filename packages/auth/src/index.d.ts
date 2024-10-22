@@ -12,7 +12,7 @@ interface Group extends GroupData {}
 declare class Group extends Model<GroupData> {}
 
 // AUTH
-declare class Auth extends Model {}
+declare class Auth extends Model<Record<string, any>> {}
 
 // ADDRESS
 interface Address extends AddressData {}

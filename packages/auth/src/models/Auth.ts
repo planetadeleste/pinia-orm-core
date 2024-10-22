@@ -1,6 +1,5 @@
 import type { Result } from '@planetadeleste/pinia-orm-core';
 import { Model } from '@planetadeleste/pinia-orm-core';
-import type { ModelFields } from 'pinia-orm';
 import type { Request } from '@pinia-orm/axios';
 import type { AxiosResponse } from 'axios';
 import type {
@@ -125,7 +124,7 @@ class Auth extends Model {
     },
   };
 
-  static fields(): ModelFields {
+  static fields() {
     return {};
   }
 }

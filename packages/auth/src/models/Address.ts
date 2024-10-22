@@ -1,5 +1,4 @@
 import { Model } from '@planetadeleste/pinia-orm-core';
-import type { ModelFields } from 'pinia-orm';
 import User from './User';
 
 class Address extends Model {
@@ -7,7 +6,7 @@ class Address extends Model {
   static baseUrl = 'address';
   static namespace = 'auth';
 
-  static fields(): ModelFields {
+  static fields() {
     return {
       id: this.attr(''),
       user_id: this.attr(null),
