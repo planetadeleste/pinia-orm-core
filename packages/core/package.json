@@ -1,6 +1,6 @@
 {
   "name": "@planetadeleste/pinia-orm-core",
-  "version": "1.0.7",
+  "version": "1.0.8",
   "description": "",
   "repository": {
     "type": "git",
@@ -11,20 +11,19 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
+      "types": "./src/index.d.ts",
       "import": "./dist/index.mjs",
       "require": "./dist/index.cjs"
     }
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "typings": "./src/index.d.ts",
   "files": [
-    "dist",
-    "src/types.d.ts"
+    "dist"
   ],
   "scripts": {
-    "build": "unbuild",
+    "build": "tsup",
     "dev": "vitest dev",
     "play": "jiti playground",
     "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src",
@@ -49,7 +48,6 @@
     "vitest": "^1.6.0",
     "vue": "^3.5.3"
   },
-  "packageManager": "pnpm@9.1.1",
   "dependencies": {
     "lodash": "^4.17.21",
     "pinia": "^2.1.7",

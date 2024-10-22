@@ -1,4 +1,7 @@
 {
+  "workspaces": [
+    "./packages/*"
+  ],
   "name": "@planetadeleste/pinia-orm-root",
   "version": "1.0.0",
   "description": "",
@@ -19,7 +22,7 @@
   },
   "main": "./dist/index.cjs",
   "module": "./dist/index.mjs",
-  "types": "./dist/index.d.ts",
+  "typings": "./dist/index.d.ts",
   "files": [
     "dist"
   ],
@@ -35,6 +38,7 @@
     "test:types": "tsc --noEmit --skipLibCheck"
   },
   "devDependencies": {
+    "@microsoft/api-extractor": "^7.47.11",
     "@types/lodash": "^4.17.7",
     "@types/node": "^20.16.5",
     "@types/uuid": "^9.0.8",
@@ -44,11 +48,12 @@
     "eslint-config-unjs": "^0.2.1",
     "jiti": "^1.21.6",
     "prettier": "^3.3.3",
+    "tsup": "^8.3.0",
     "typescript": "^5.5.4",
     "unbuild": "^2.0.0",
     "vitest": "^1.6.0"
   },
-  "packageManager": "pnpm@8.12.1",
+  "packageManager": "pnpm@9.12.2",
   "dependencies": {
     "lodash": "^4.17.21",
     "pinia": "^2.2.2",

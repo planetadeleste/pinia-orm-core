@@ -60,7 +60,7 @@ type OrmBeforeSaveEvent<M = Model, D = Record<string, any>> = [M, D];
 type Config = Request["config"];
 type Constructor<T> = new (...args: any[]) => T;
 
-interface fnUseOrmModel<M extends Model, R extends Request = Request> {
+interface fnUseOrmModel<M extends Model = Model, R extends Request = Request> {
   all: () => Collection<M> | null;
   find: (id: number | string, obConfig?: Config) => Promise<M | null>;
   filterBy: (filters: Record<string, any>) => void;
@@ -91,15 +91,20 @@ interface fnUseOrmModel<M extends Model, R extends Request = Request> {
   request: (sUrl?: string, obConfig?: Config) => Promise<OrmAxiosResponse>;
 }
 
+declare function useOrmModel<M extends Model, R extends Request = Request>(
+  obModel: Constructor<M>,
+): fnUseOrmModel<M, R>;
+
 export type {
   ApiLinksResponse,
   ApiMetaResponse,
-  Result,
-  ResultData,
-  Response,
-  FileData,
-  OrmBeforeSaveEvent,
   Config,
   Constructor,
+  FileData,
+  OrmBeforeSaveEvent,
+  Response,
+  Result,
+  ResultData,
   fnUseOrmModel,
+  useOrmModel,
 };

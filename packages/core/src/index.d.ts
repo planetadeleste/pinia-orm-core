@@ -1,6 +1,5 @@
 import type { Element, ModelOptions } from "pinia-orm";
 import { Model as BaseModel } from "pinia-orm";
-import type { Request } from "@pinia-orm/axios";
 
 interface Model<T extends Element = Element> extends BaseModel {
   $getOriginal: () => T;
@@ -26,10 +25,6 @@ declare class Model extends BaseModel {
   $baseUrl(): string;
 }
 
-declare function useOrmModel<M extends Model, R extends Request = Request>(
-  obModel: Constructor<M>,
-): fnUseOrmModel<M, R>;
-
 export type {
   ApiLinksResponse,
   ApiMetaResponse,
@@ -41,5 +36,6 @@ export type {
   Config,
   Constructor,
   fnUseOrmModel,
+  useOrmModel,
 } from "./types";
-export { Model, useOrmModel };
+export { Model };
