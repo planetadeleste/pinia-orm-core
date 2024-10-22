@@ -1,12 +1,11 @@
 import { Model } from "@planetadeleste/pinia-orm-core";
-import type { ModelFields } from "pinia-orm";
 
 class Brand extends Model {
   static entity = "sha_brands";
   static baseUrl = "brands";
   static namespace = "shopaholic";
 
-  static fields(): ModelFields {
+  static fields(): Record<string, any> {
     return {
       id: this.attr(""),
       company_id: this.attr(""),

@@ -56,7 +56,7 @@ importers:
         version: 3.3.3
       tsup:
         specifier: ^8.3.0
-        version: 8.3.0(@microsoft/api-extractor@7.47.11(@types/node@20.16.5))(jiti@1.21.6)(postcss@8.4.45)(typescript@5.5.4)
+        version: 8.3.0(@microsoft/api-extractor@7.47.11(@types/node@20.16.5))(jiti@1.21.6)(postcss@8.4.38)(typescript@5.5.4)
       typescript:
         specifier: ^5.5.4
         version: 5.5.4
@@ -108,36 +108,6 @@ importers:
       '@planetadeleste/pinia-orm-core':
         specifier: workspace:*
         version: link:../core
-      '@types/node':
-        specifier: ^20.14.2
-        version: 20.16.5
-      '@vitest/coverage-v8':
-        specifier: ^1.6.0
-        version: 1.6.0(vitest@1.6.0(@types/node@20.16.5))
-      changelogen:
-        specifier: ^0.5.5
-        version: 0.5.5
-      eslint:
-        specifier: ^8.57.0
-        version: 8.57.0
-      eslint-config-unjs:
-        specifier: ^0.2.1
-        version: 0.2.1(eslint@8.57.0)(typescript@5.5.4)
-      jiti:
-        specifier: ^1.21.3
-        version: 1.21.6
-      prettier:
-        specifier: ^3.3.1
-        version: 3.3.3
-      typescript:
-        specifier: ^5.4.5
-        version: 5.5.4
-      unbuild:
-        specifier: ^2.0.0
-        version: 2.0.0(typescript@5.5.4)
-      vitest:
-        specifier: ^1.6.0
-        version: 1.6.0(@types/node@20.16.5)
 
   packages/orders:
     dependencies:
@@ -160,36 +130,6 @@ importers:
       '@planetadeleste/pinia-orm-shopaholic':
         specifier: workspace:*
         version: link:../shopaholic
-      '@types/node':
-        specifier: ^20.14.2
-        version: 20.16.5
-      '@vitest/coverage-v8':
-        specifier: ^1.6.0
-        version: 1.6.0(vitest@1.6.0(@types/node@20.16.5))
-      changelogen:
-        specifier: ^0.5.5
-        version: 0.5.5
-      eslint:
-        specifier: ^8.57.0
-        version: 8.57.0
-      eslint-config-unjs:
-        specifier: ^0.2.1
-        version: 0.2.1(eslint@8.57.0)(typescript@5.5.4)
-      jiti:
-        specifier: ^1.21.3
-        version: 1.21.6
-      prettier:
-        specifier: ^3.3.1
-        version: 3.3.3
-      typescript:
-        specifier: ^5.4.5
-        version: 5.5.4
-      unbuild:
-        specifier: ^2.0.0
-        version: 2.0.0(typescript@5.5.4)
-      vitest:
-        specifier: ^1.6.0
-        version: 1.6.0(@types/node@20.16.5)
 
   packages/shopaholic:
     dependencies:
@@ -206,36 +146,6 @@ importers:
       '@planetadeleste/pinia-orm-core':
         specifier: workspace:*
         version: link:../core
-      '@types/node':
-        specifier: ^20.14.2
-        version: 20.16.5
-      '@vitest/coverage-v8':
-        specifier: ^1.6.0
-        version: 1.6.0(vitest@1.6.0(@types/node@20.16.5))
-      changelogen:
-        specifier: ^0.5.5
-        version: 0.5.5
-      eslint:
-        specifier: ^8.57.0
-        version: 8.57.0
-      eslint-config-unjs:
-        specifier: ^0.2.1
-        version: 0.2.1(eslint@8.57.0)(typescript@5.5.4)
-      jiti:
-        specifier: ^1.21.3
-        version: 1.21.6
-      prettier:
-        specifier: ^3.3.1
-        version: 3.3.3
-      typescript:
-        specifier: ^5.4.5
-        version: 5.5.4
-      unbuild:
-        specifier: ^2.0.0
-        version: 2.0.0(typescript@5.5.4)
-      vitest:
-        specifier: ^1.6.0
-        version: 1.6.0(@types/node@20.16.5)
 
 packages:
 
@@ -6483,12 +6393,12 @@ snapshots:
     dependencies:
       postcss: 8.4.38
 
-  postcss-load-config@6.0.1(jiti@1.21.6)(postcss@8.4.45):
+  postcss-load-config@6.0.1(jiti@1.21.6)(postcss@8.4.38):
     dependencies:
       lilconfig: 3.1.1
     optionalDependencies:
       jiti: 1.21.6
-      postcss: 8.4.45
+      postcss: 8.4.38
 
   postcss-merge-longhand@6.0.5(postcss@8.4.38):
     dependencies:
@@ -7024,7 +6934,7 @@ snapshots:
 
   tslib@1.14.1: {}
 
-  tsup@8.3.0(@microsoft/api-extractor@7.47.11(@types/node@20.16.5))(jiti@1.21.6)(postcss@8.4.45)(typescript@5.5.4):
+  tsup@8.3.0(@microsoft/api-extractor@7.47.11(@types/node@20.16.5))(jiti@1.21.6)(postcss@8.4.38)(typescript@5.5.4):
     dependencies:
       bundle-require: 5.0.0(esbuild@0.23.1)
       cac: 6.7.14
@@ -7035,7 +6945,7 @@ snapshots:
       execa: 5.1.1
       joycon: 3.1.1
       picocolors: 1.1.0
-      postcss-load-config: 6.0.1(jiti@1.21.6)(postcss@8.4.45)
+      postcss-load-config: 6.0.1(jiti@1.21.6)(postcss@8.4.38)
       resolve-from: 5.0.0
       rollup: 4.24.0
       source-map: 0.8.0-beta.0
@@ -7044,7 +6954,7 @@ snapshots:
       tree-kill: 1.2.2
     optionalDependencies:
       '@microsoft/api-extractor': 7.47.11(@types/node@20.16.5)
-      postcss: 8.4.45
+      postcss: 8.4.38
       typescript: 5.5.4
     transitivePeerDependencies:
       - jiti

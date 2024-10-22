@@ -1,5 +1,4 @@
 import { Model } from "@planetadeleste/pinia-orm-core";
-import type { ModelFields } from "pinia-orm";
 import Order from "./Order";
 
 class OrderPosition extends Model {
@@ -7,7 +6,7 @@ class OrderPosition extends Model {
   static baseUrl = "orders/positions";
   static namespace = "orders";
 
-  static fields(): ModelFields {
+  static fields(): Record<string, any> {
     const arExtraFields: string[] = [
       "discount_total_price",
       "discount_total_price_per_unit",
@@ -90,7 +89,7 @@ class OrderPosition extends Model {
       "total_price_without_tax",
       "total_price_without_tax_value",
     ];
-    const obMainProps: ModelFields = {
+    const obMainProps: Record<string, any> = {
       id: this.attr(""),
       order_id: this.attr(null),
       item_id: this.attr(null),

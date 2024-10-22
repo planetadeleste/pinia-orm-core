@@ -1,6 +1,6 @@
 {
   "name": "@planetadeleste/pinia-orm-shopaholic",
-  "version": "1.0.4",
+  "version": "1.0.5",
   "description": "",
   "repository": {
     "type": "git",
@@ -23,34 +23,15 @@
     "dist"
   ],
   "scripts": {
-    "build": "unbuild",
-    "dev": "vitest dev",
-    "play": "jiti playground",
-    "lint": "eslint --cache --ext .ts,.js,.mjs,.cjs . && prettier -c src test",
-    "lint:fix": "eslint --cache --ext .ts,.js,.mjs,.cjs . --fix && prettier -c src test -w",
-    "prepack": "pnpm build",
-    "release": "pnpm test && changelogen --release && npm publish && git push --follow-tags",
-    "test": "pnpm lint && pnpm test:types && vitest run --coverage",
-    "test:types": "tsc --noEmit --skipLibCheck"
+    "build": "tsup"
   },
   "devDependencies": {
-    "@planetadeleste/pinia-orm-core": "workspace:*",
-    "@types/node": "^20.14.2",
-    "@vitest/coverage-v8": "^1.6.0",
-    "changelogen": "^0.5.5",
-    "eslint": "^8.57.0",
-    "eslint-config-unjs": "^0.2.1",
-    "jiti": "^1.21.3",
-    "prettier": "^3.3.1",
-    "typescript": "^5.4.5",
-    "unbuild": "^2.0.0",
-    "vitest": "^1.6.0"
+    "@planetadeleste/pinia-orm-core": "workspace:*"
   },
   "peerDependencies": {
     "@pinia-orm/axios": "^1.7.0",
     "@planetadeleste/pinia-orm-core": "^1.0.0",
     "axios": "^1.6.5",
     "pinia-orm": "^1.7.2"
-  },
-  "packageManager": "pnpm@9.1.1"
+  }
 }

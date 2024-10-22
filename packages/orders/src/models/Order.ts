@@ -1,5 +1,4 @@
 import { Model } from "@planetadeleste/pinia-orm-core";
-import type { ModelFields } from "pinia-orm";
 import { Currency } from "@planetadeleste/pinia-orm-shopaholic";
 import { User } from "@planetadeleste/pinia-orm-auth";
 import Status from "./Status";
@@ -12,7 +11,7 @@ class Order extends Model {
   static baseUrl = "orders";
   static namespace = "orders";
 
-  static fields(): ModelFields {
+  static fields(): Record<string, any> {
     return {
       id: this.attr(""),
       currency_id: this.attr(null),

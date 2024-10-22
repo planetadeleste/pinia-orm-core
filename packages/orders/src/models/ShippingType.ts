@@ -1,12 +1,11 @@
 import { Model } from "@planetadeleste/pinia-orm-core";
-import type { ModelFields } from "pinia-orm";
 
 class ShippingType extends Model {
   static entity = "sha_shipping_type";
   static baseUrl = "shippingtypes";
   static namespace = "orders";
 
-  static fields(): ModelFields {
+  static fields(): Record<string, any> {
     return {
       id: this.attr(""),
       name: this.attr(null),

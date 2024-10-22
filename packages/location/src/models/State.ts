@@ -1,5 +1,4 @@
 import { Model } from "@planetadeleste/pinia-orm-core";
-import type { ModelFields } from "pinia-orm";
 import Country from "./Country";
 import Town from "./Town";
 
@@ -8,7 +7,7 @@ class State extends Model {
   static baseUrl = "states";
   static namespace = "location";
 
-  static fields(): ModelFields {
+  static fields(): Record<string, any> {
     return {
       id: this.attr(""),
       country_id: this.attr(""),

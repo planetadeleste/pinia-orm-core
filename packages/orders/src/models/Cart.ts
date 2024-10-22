@@ -1,6 +1,5 @@
 import type { Result } from "@planetadeleste/pinia-orm-core";
 import { Model } from "@planetadeleste/pinia-orm-core";
-import type { ModelFields } from "pinia-orm";
 import type { Request } from "@pinia-orm/axios";
 import type { AxiosResponse } from "axios";
 import type {
@@ -86,7 +85,7 @@ class Cart extends Model {
     },
   };
 
-  static fields(): ModelFields {
+  static fields(): Record<string, any> {
     return {
       id: this.attr(""),
       name: this.attr(null),

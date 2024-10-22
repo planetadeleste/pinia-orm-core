@@ -2,7 +2,7 @@
 
 
 ## v1.0.5
-- Fix types
+- Update types
 
 [compare changes](https://github.com/planetadeleste/pinia-orm-core/compare/v1.0.4...v1.0.5)
 

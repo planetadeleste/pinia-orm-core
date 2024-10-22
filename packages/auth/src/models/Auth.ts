@@ -124,7 +124,7 @@ class Auth extends Model {
     },
   };
 
-  static fields() {
+  static fields(): Record<string, any> {
     return {};
   }
 }

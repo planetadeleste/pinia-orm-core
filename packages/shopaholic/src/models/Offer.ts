@@ -1,6 +1,4 @@
 import { Model } from "@planetadeleste/pinia-orm-core";
-
-import type { ModelFields } from "pinia-orm";
 import Product from "./Product";
 
 class Offer extends Model {
@@ -8,7 +6,7 @@ class Offer extends Model {
   static baseUrl = "offers";
   static namespace = "shopaholic";
 
-  static fields(): ModelFields {
+  static fields(): Record<string, any> {
     return {
       id: this.attr(""),
       product_id: this.number(0),

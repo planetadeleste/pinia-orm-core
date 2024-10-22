@@ -1,6 +1,4 @@
 import { Model } from "@planetadeleste/pinia-orm-core";
-
-import type { ModelFields } from "pinia-orm";
 import Brand from "./Brand";
 import Category from "./Category";
 import Offer from "./Offer";
@@ -10,7 +8,7 @@ class Product extends Model {
   static baseUrl = "products";
   static namespace = "shopaholic";
 
-  static fields(): ModelFields {
+  static fields(): Record<string, any> {
     return {
       id: this.attr(""),
       active: this.boolean(true),

@@ -26,6 +26,7 @@ export interface CategoryAxiosRepository extends Request {
   tree(): Promise<AxiosResponse<Result<CategoryData[]>>>;
 }
 
+// @ts-ignore
 export interface CategoryApiAxiosRepository extends AxiosRepository<Category> {
   api(): CategoryAxiosRepository;
 }

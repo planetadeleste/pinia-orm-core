@@ -5,7 +5,7 @@ class Group extends Model {
   static baseUrl = 'groups';
   static namespace = 'auth';
 
-  static fields() {
+  static fields(): Record<string, any> {
     return {
       id: this.attr(''),
       name: this.attr(null),

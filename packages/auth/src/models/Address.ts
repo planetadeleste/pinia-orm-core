@@ -6,7 +6,7 @@ class Address extends Model {
   static baseUrl = 'address';
   static namespace = 'auth';
 
-  static fields() {
+  static fields(): Record<string, any> {
     return {
       id: this.attr(''),
       user_id: this.attr(null),

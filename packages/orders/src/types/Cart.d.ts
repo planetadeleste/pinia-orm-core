@@ -200,6 +200,7 @@ export interface CartAxiosRepository extends Request {
   ): Promise<AxiosResponse<Result<CartData>>>;
 }
 
+// @ts-ignore
 export interface CartApiAxiosRepository extends AxiosRepository<Cart> {
   api(): CartAxiosRepository;
 }

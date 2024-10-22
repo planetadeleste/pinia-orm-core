@@ -1,13 +1,11 @@
 import { Model } from "@planetadeleste/pinia-orm-core";
 
-import type { ModelFields } from "pinia-orm";
-
 class Currency extends Model {
   static entity = "sha_currencies";
   static baseUrl = "currencies";
   static namespace = "shopaholic";
 
-  static fields(): ModelFields {
+  static fields(): Record<string, any> {
     return {
       id: this.attr(""),
       external_id: this.attr(null),

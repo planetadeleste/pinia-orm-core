@@ -1,12 +1,11 @@
 import { Model } from "@planetadeleste/pinia-orm-core";
-import type { ModelFields } from "pinia-orm";
 
 class PaymentMethod extends Model {
   static entity = "sha_paymentmethods";
   static baseUrl = "paymentmethods";
   static namespace = "orders";
 
-  static fields(): ModelFields {
+  static fields(): Record<string, any> {
     return {
       id: this.attr(""),
       name: this.attr(null),

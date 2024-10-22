@@ -6,7 +6,7 @@ class User extends Model {
   static baseUrl = 'users';
   static namespace = 'auth';
 
-  static fields() {
+  static fields(): Record<string, any> {
     return {
       id: this.attr(''),
       groups: this.attr(null),
