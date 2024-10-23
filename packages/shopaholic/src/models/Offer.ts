@@ -6,7 +6,7 @@ class Offer extends Model {
   static baseUrl = "offers";
   static namespace = "shopaholic";
 
-  static fields(): Record<string, any> {
+  static fields() {
     return {
       id: this.attr(""),
       product_id: this.number(0),

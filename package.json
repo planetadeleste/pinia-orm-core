@@ -40,7 +40,7 @@
   "devDependencies": {
     "@microsoft/api-extractor": "^7.47.11",
     "@types/lodash": "^4.17.12",
-    "@types/node": "^20.16.14",
+    "@types/node": "^20.16.15",
     "@types/uuid": "^9.0.8",
     "@vitest/coverage-v8": "^1.6.0",
     "changelogen": "^0.5.7",

@@ -23,7 +23,7 @@ class Category extends Model {
     },
   };
 
-  static fields(): Record<string, any> {
+  static fields() {
     return {
       id: this.attr(""),
       parent_id: this.attr(null),

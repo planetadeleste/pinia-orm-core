@@ -8,7 +8,7 @@ class Product extends Model {
   static baseUrl = "products";
   static namespace = "shopaholic";
 
-  static fields(): Record<string, any> {
+  static fields() {
     return {
       id: this.attr(""),
       active: this.boolean(true),

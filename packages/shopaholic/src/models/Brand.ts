@@ -5,7 +5,7 @@ class Brand extends Model {
   static baseUrl = "brands";
   static namespace = "shopaholic";
 
-  static fields(): Record<string, any> {
+  static fields() {
     return {
       id: this.attr(""),
       company_id: this.attr(""),
