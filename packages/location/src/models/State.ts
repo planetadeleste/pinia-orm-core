@@ -1,4 +1,5 @@
 import { Model } from "@planetadeleste/pinia-orm-core";
+import { Attr, Bool, BelongsTo, HasMany } from "pinia-orm/decorators";
 import Country from "./Country";
 import Town from "./Town";
 
@@ -7,19 +8,14 @@ class State extends Model {
   static baseUrl = "states";
   static namespace = "location";
 
-  static fields(): Record<string, any> {
-    return {
-      id: this.attr(""),
-      country_id: this.attr(""),
-      name: this.attr(null),
-      code: this.attr(null),
-      is_default: this.boolean(false),
-      created_at: this.attr(null),
-      updated_at: this.attr(null),
-      country: this.belongsTo(Country, "country_id"),
-      towns: this.hasMany(Town, "state_id"),
-    };
-  }
+  @Attr("") declare id: number | string;
+  @Attr(null) declare country_id: number;
+  @Attr(null) declare name: string;
+  @Attr(null) declare code: string;
+  @Bool(false) declare is_default: boolean;
+
+  @BelongsTo(() => Country, "country_id") declare country: Country;
+  @HasMany(() => Town, "state_id") declare towns: Town[];
 }
 
 export default State;
