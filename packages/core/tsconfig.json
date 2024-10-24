@@ -1,10 +1,13 @@
 {
-  "compilerOptions": {
-    "target": "ESNext",
-    "module": "ESNext",
-    "moduleResolution": "Node",
-    "esModuleInterop": true,
-    "strict": true
-  },
-  "include": ["src"]
+    "compilerOptions":{
+        "target":"ESNext",
+        "module":"ESNext",
+        "moduleResolution":"Node",
+        "esModuleInterop":true,
+        "useDefineForClassFields":false,
+        "strict":true
+    },
+    "include":[
+        "src"
+    ]
 }
