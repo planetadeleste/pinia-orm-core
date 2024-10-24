@@ -1,23 +1,20 @@
 import { Model } from "@planetadeleste/pinia-orm-core";
+import { Attr } from "pinia-orm/decorators";
 
 class ShippingType extends Model {
   static entity = "sha_shipping_type";
   static baseUrl = "shippingtypes";
   static namespace = "orders";
 
-  static fields(): Record<string, any> {
-    return {
-      id: this.attr(""),
-      name: this.attr(null),
-      code: this.attr(null),
-      price_value: this.attr(null),
-      preview_text: this.attr(null),
-      property: this.attr(null),
-      api_class: this.attr(null),
-      created_at: this.attr(null),
-      updated_at: this.attr(null),
-    };
-  }
+  @Attr("") declare id: number | string;
+  @Attr(null) declare name: string;
+  @Attr(null) declare code: string;
+  @Attr(null) declare price_value: string;
+  @Attr(null) declare preview_text: string;
+  @Attr(null) declare property: Record<string, any>;
+  @Attr(null) declare api_class: string;
+  @Attr(null) declare created_at?: string;
+  @Attr(null) declare updated_at?: string;
 }
 
 export default ShippingType;

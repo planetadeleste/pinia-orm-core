@@ -13,8 +13,8 @@ export interface OrderPositionData {
   width: number;
   quantity: number;
   property: Record<string, any>;
-  created_at: string;
-  updated_at: string;
+  created_at?: string;
+  updated_at?: string;
 
   currency_code: string;
   currency_symbol: string;

@@ -1,19 +1,16 @@
 import { Model } from "@planetadeleste/pinia-orm-core";
+import { Attr } from "pinia-orm/decorators";
 
 class PaymentMethod extends Model {
   static entity = "sha_paymentmethods";
   static baseUrl = "paymentmethods";
   static namespace = "orders";
 
-  static fields(): Record<string, any> {
-    return {
-      id: this.attr(""),
-      name: this.attr(null),
-      code: this.attr(null),
-      preview_text: this.attr(null),
-      restriction: this.attr(null),
-    };
-  }
+  @Attr("") declare id: number | string;
+  @Attr(null) declare name: string;
+  @Attr(null) declare code: string;
+  @Attr(null) declare preview_text: string;
+  @Attr(null) declare restriction: string;
 }
 
 export default PaymentMethod;

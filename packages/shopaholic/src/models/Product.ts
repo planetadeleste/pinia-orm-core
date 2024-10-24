@@ -1,7 +1,7 @@
 import type { FileData } from "@planetadeleste/pinia-orm-core";
 import { Model } from "@planetadeleste/pinia-orm-core";
-import { Attr, BelongsTo, HasMany, OnDelete, Bool } from "pinia-orm/decorators";
-import type { BrandData, CategoryData, OfferData } from "../types";
+import { Attr, BelongsTo, Bool, HasMany, OnDelete } from "pinia-orm/decorators";
+import type { OfferData } from "../types";
 import Brand from "./Brand";
 import Category from "./Category";
 import Offer from "./Offer";

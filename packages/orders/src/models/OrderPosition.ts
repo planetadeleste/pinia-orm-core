@@ -1,4 +1,5 @@
 import { Model } from "@planetadeleste/pinia-orm-core";
+import { Attr, BelongsTo, OnDelete } from "pinia-orm/decorators";
 import Order from "./Order";
 
 class OrderPosition extends Model {
@@ -6,112 +7,102 @@ class OrderPosition extends Model {
   static baseUrl = "orders/positions";
   static namespace = "orders";
 
-  static fields(): Record<string, any> {
-    const arExtraFields: string[] = [
-      "discount_total_price",
-      "discount_total_price_per_unit",
-      "discount_total_price_per_unit_value",
-      "discount_total_price_per_unit_with_tax",
-      "discount_total_price_per_unit_with_tax_value",
-      "discount_total_price_per_unit_without_tax",
-      "discount_total_price_per_unit_without_tax_value",
-      "discount_total_price_value",
-      "discount_total_price_with_tax",
-      "discount_total_price_with_tax_value",
-      "discount_total_price_without_tax",
-      "discount_total_price_without_tax_value",
-      "increase_total_price",
-      "increase_total_price_per_unit",
-      "increase_total_price_per_unit_value",
-      "increase_total_price_per_unit_with_tax",
-      "increase_total_price_per_unit_with_tax_value",
-      "increase_total_price_per_unit_without_tax",
-      "increase_total_price_per_unit_without_tax_value",
-      "increase_total_price_value",
-      "increase_total_price_with_tax",
-      "increase_total_price_with_tax_value",
-      "increase_total_price_without_tax",
-      "increase_total_price_without_tax_value",
-      "old_price",
-      "old_price_value",
-      "old_price_with_tax",
-      "old_price_with_tax_value",
-      "old_price_without_tax",
-      "old_price_without_tax_value",
-      "old_total_price",
-      "old_total_price_per_unit",
-      "old_total_price_per_unit_value",
-      "old_total_price_per_unit_with_tax",
-      "old_total_price_per_unit_with_tax_value",
-      "old_total_price_per_unit_without_tax",
-      "old_total_price_per_unit_without_tax_value",
-      "old_total_price_value",
-      "old_total_price_with_tax",
-      "old_total_price_with_tax_value",
-      "old_total_price_without_tax",
-      "old_total_price_without_tax_value",
-      "price_value",
-      "price_with_tax",
-      "price_with_tax_value",
-      "price_without_tax",
-      "price_without_tax_value",
-      "tax_discount_total_price",
-      "tax_discount_total_price_per_unit",
-      "tax_discount_total_price_per_unit_value",
-      "tax_discount_total_price_value",
-      "tax_increase_total_price",
-      "tax_increase_total_price_per_unit",
-      "tax_increase_total_price_per_unit_value",
-      "tax_increase_total_price_value",
-      "tax_old_price",
-      "tax_old_price_value",
-      "tax_old_total_price",
-      "tax_old_total_price_per_unit",
-      "tax_old_total_price_per_unit_value",
-      "tax_old_total_price_value",
-      "tax_percent",
-      "tax_price",
-      "tax_price_value",
-      "tax_total_price",
-      "tax_total_price_per_unit",
-      "tax_total_price_per_unit_value",
-      "tax_total_price_value",
-      "total_price",
-      "total_price_per_unit",
-      "total_price_per_unit_value",
-      "total_price_per_unit_with_tax",
-      "total_price_per_unit_with_tax_value",
-      "total_price_per_unit_without_tax",
-      "total_price_per_unit_without_tax_value",
-      "total_price_value",
-      "total_price_with_tax",
-      "total_price_with_tax_value",
-      "total_price_without_tax",
-      "total_price_without_tax_value",
-    ];
-    const obMainProps: Record<string, any> = {
-      id: this.attr(""),
-      order_id: this.attr(null),
-      item_id: this.attr(null),
-      item_type: this.attr(null),
-      code: this.attr(null),
-      height: this.attr(null),
-      length: this.attr(null),
-      weight: this.attr(null),
-      width: this.attr(null),
-      quantity: this.attr(null),
-      price: this.attr(null),
-      property: this.attr({}),
+  @Attr("") declare id: number | string;
+  @Attr(null) declare order_id: number;
+  @Attr(null) declare item_id: number | string;
+  @Attr(null) declare item_type: string;
+  @Attr(null) declare code: string;
+  @Attr(null) declare height: number;
+  @Attr(null) declare length: number;
+  @Attr(null) declare weight: number;
+  @Attr(null) declare width: number;
+  @Attr(null) declare quantity: number;
+  @Attr({}) declare property: Record<string, any>;
+  @Attr(null) declare created_at: string;
+  @Attr(null) declare updated_at: string;
 
-      order: this.belongsTo(Order, "order_id"),
-    };
+  @BelongsTo(() => Order, "order_id") @OnDelete("cascade") declare order: Order;
 
-    for (const sValue of arExtraFields) {
-      obMainProps[sValue] = this.attr(null);
-    }
-
-    return obMainProps;
-  }
+  @Attr(null) declare discount_total_price: number;
+  @Attr(null) declare discount_total_price_per_unit: number;
+  @Attr(null) declare discount_total_price_per_unit_value: number;
+  @Attr(null) declare discount_total_price_per_unit_with_tax: number;
+  @Attr(null) declare discount_total_price_per_unit_with_tax_value: number;
+  @Attr(null) declare discount_total_price_per_unit_without_tax: number;
+  @Attr(null) declare discount_total_price_per_unit_without_tax_value: number;
+  @Attr(null) declare discount_total_price_value: number;
+  @Attr(null) declare discount_total_price_with_tax: number;
+  @Attr(null) declare discount_total_price_with_tax_value: number;
+  @Attr(null) declare discount_total_price_without_tax: number;
+  @Attr(null) declare discount_total_price_without_tax_value: number;
+  @Attr(null) declare increase_total_price: number;
+  @Attr(null) declare increase_total_price_per_unit: number;
+  @Attr(null) declare increase_total_price_per_unit_value: number;
+  @Attr(null) declare increase_total_price_per_unit_with_tax: number;
+  @Attr(null) declare increase_total_price_per_unit_with_tax_value: number;
+  @Attr(null) declare increase_total_price_per_unit_without_tax: number;
+  @Attr(null) declare increase_total_price_per_unit_without_tax_value: number;
+  @Attr(null) declare increase_total_price_value: number;
+  @Attr(null) declare increase_total_price_with_tax: number;
+  @Attr(null) declare increase_total_price_with_tax_value: number;
+  @Attr(null) declare increase_total_price_without_tax: number;
+  @Attr(null) declare increase_total_price_without_tax_value: number;
+  @Attr(null) declare old_price: number;
+  @Attr(null) declare old_price_value: number;
+  @Attr(null) declare old_price_with_tax: number;
+  @Attr(null) declare old_price_with_tax_value: number;
+  @Attr(null) declare old_price_without_tax: number;
+  @Attr(null) declare old_price_without_tax_value: number;
+  @Attr(null) declare old_total_price: number;
+  @Attr(null) declare old_total_price_per_unit: number;
+  @Attr(null) declare old_total_price_per_unit_value: number;
+  @Attr(null) declare old_total_price_per_unit_with_tax: number;
+  @Attr(null) declare old_total_price_per_unit_with_tax_value: number;
+  @Attr(null) declare old_total_price_per_unit_without_tax: number;
+  @Attr(null) declare old_total_price_per_unit_without_tax_value: number;
+  @Attr(null) declare old_total_price_value: number;
+  @Attr(null) declare old_total_price_with_tax: number;
+  @Attr(null) declare old_total_price_with_tax_value: number;
+  @Attr(null) declare old_total_price_without_tax: number;
+  @Attr(null) declare old_total_price_without_tax_value: number;
+  @Attr(null) declare price_value: number;
+  @Attr(null) declare price_with_tax: number;
+  @Attr(null) declare price_with_tax_value: number;
+  @Attr(null) declare price_without_tax: number;
+  @Attr(null) declare price_without_tax_value: number;
+  @Attr(null) declare tax_discount_total_price: number;
+  @Attr(null) declare tax_discount_total_price_per_unit: number;
+  @Attr(null) declare tax_discount_total_price_per_unit_value: number;
+  @Attr(null) declare tax_discount_total_price_value: number;
+  @Attr(null) declare tax_increase_total_price: number;
+  @Attr(null) declare tax_increase_total_price_per_unit: number;
+  @Attr(null) declare tax_increase_total_price_per_unit_value: number;
+  @Attr(null) declare tax_increase_total_price_value: number;
+  @Attr(null) declare tax_old_price: number;
+  @Attr(null) declare tax_old_price_value: number;
+  @Attr(null) declare tax_old_total_price: number;
+  @Attr(null) declare tax_old_total_price_per_unit: number;
+  @Attr(null) declare tax_old_total_price_per_unit_value: number;
+  @Attr(null) declare tax_old_total_price_value: number;
+  @Attr(null) declare tax_percent: number;
+  @Attr(null) declare tax_price: number;
+  @Attr(null) declare tax_price_value: number;
+  @Attr(null) declare tax_total_price: number;
+  @Attr(null) declare tax_total_price_per_unit: number;
+  @Attr(null) declare tax_total_price_per_unit_value: number;
+  @Attr(null) declare tax_total_price_value: number;
+  @Attr(null) declare total_price: number;
+  @Attr(null) declare total_price_per_unit: number;
+  @Attr(null) declare total_price_per_unit_value: number;
+  @Attr(null) declare total_price_per_unit_with_tax: number;
+  @Attr(null) declare total_price_per_unit_with_tax_value: number;
+  @Attr(null) declare total_price_per_unit_without_tax: number;
+  @Attr(null) declare total_price_per_unit_without_tax_value: number;
+  @Attr(null) declare total_price_value: number;
+  @Attr(null) declare total_price_with_tax: number;
+  @Attr(null) declare total_price_with_tax_value: number;
+  @Attr(null) declare total_price_without_tax: number;
+  @Attr(null) declare total_price_without_tax_value: number;
 }
 
 export default OrderPosition;

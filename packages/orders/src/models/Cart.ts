@@ -2,6 +2,7 @@ import type { Result } from "@planetadeleste/pinia-orm-core";
 import { Model } from "@planetadeleste/pinia-orm-core";
 import type { Request } from "@pinia-orm/axios";
 import type { AxiosResponse } from "axios";
+import { Attr } from "pinia-orm/decorators";
 import type {
   CartComponentAddData,
   CartComponentItemsData,
@@ -85,18 +86,14 @@ class Cart extends Model {
     },
   };
 
-  static fields(): Record<string, any> {
-    return {
-      id: this.attr(""),
-      name: this.attr(null),
-      name_for_user: this.attr(null),
-      code: this.attr(null),
-      preview_text: this.attr(null),
-      is_user_show: this.attr(null),
-      user_status_id: this.attr(null),
-      color: this.attr(null),
-    };
-  }
+  @Attr("") declare id: string | number;
+  @Attr(null) declare name: string;
+  @Attr(null) declare name_for_user: string;
+  @Attr(null) declare code: string;
+  @Attr(null) declare preview_text: string;
+  @Attr(null) declare is_user_show: string;
+  @Attr(null) declare user_status_id: string;
+  @Attr(null) declare color: string;
 }
 
 export default Cart;
