@@ -1,4 +1,6 @@
 import { Model } from "@planetadeleste/pinia-orm-core";
+import type { FileData } from "@planetadeleste/pinia-orm-core";
+import { Attr, BelongsTo, Bool, Num } from "pinia-orm/decorators";
 import Product from "./Product";
 
 class Offer extends Model {
@@ -6,32 +8,29 @@ class Offer extends Model {
   static baseUrl = "offers";
   static namespace = "shopaholic";
 
-  static fields() {
-    return {
-      id: this.attr(""),
-      product_id: this.number(0),
-      name: this.string(null),
-      item_type: this.string(null),
-      item_id: this.string(null),
-      code: this.string(null),
-      price: this.string(null),
-      price_value: this.number(0),
-      old_price: this.string(null),
-      old_price_value: this.number(0),
-      quantity: this.number(0),
-      currency: this.string(null),
-      preview_text: this.string(null),
-      thumbnail: this.string(null),
-      text: this.string(null),
-      value: this.number(0),
-      active: this.boolean(true),
-      description: this.string(null),
-      preview_image: this.string(null),
-      images: this.attr(null),
-      property: this.attr({}),
-      product: this.belongsTo(Product, "product_id"),
-    };
-  }
+  @Attr("") declare id: number | string;
+  @Attr(null) declare product_id: number;
+  @Attr(null) declare name: string;
+  @Attr(null) declare item_type: string;
+  @Attr(null) declare item_id: string;
+  @Attr(null) declare code: string;
+  @Attr(null) declare price: string | number;
+  @Num(0) declare price_value: number;
+  @Attr(null) declare old_price: string;
+  @Num(0) declare old_price_value: number;
+  @Num(0) declare quantity: number;
+  @Attr(null) declare currency: string;
+  @Attr(null) declare preview_text: string;
+  @Attr(null) declare thumbnail: string;
+  @Attr(null) declare text: string;
+  @Num(0) declare value: number;
+  @Bool(null) declare active: boolean;
+  @Attr(null) declare description: string;
+  @Attr(null) declare preview_image: string;
+  @Attr(null) declare images: FileData[];
+  @Attr({}) declare property: Record<string, any>;
+
+  @BelongsTo(() => Product, "product_id") declare product: Product;
 }
 
 export default Offer;

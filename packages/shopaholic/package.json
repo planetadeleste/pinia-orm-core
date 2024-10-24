@@ -1,6 +1,6 @@
 {
   "name": "@planetadeleste/pinia-orm-shopaholic",
-  "version": "1.0.6",
+  "version": "1.0.7",
   "description": "",
   "repository": {
     "type": "git",
@@ -26,12 +26,15 @@
     "build": "tsup"
   },
   "devDependencies": {
-    "@planetadeleste/pinia-orm-core": "workspace:*"
+    "@pinia-orm/axios": "^1.9.2",
+    "@planetadeleste/pinia-orm-core": "workspace:*",
+    "axios": "^1.7.7",
+    "pinia-orm": "^1.9.2"
   },
   "peerDependencies": {
-    "@pinia-orm/axios": "^1.7.0",
+    "@pinia-orm/axios": "^1.9.2",
     "@planetadeleste/pinia-orm-core": "^1.0.0",
-    "axios": "^1.6.5",
-    "pinia-orm": "^1.7.2"
+    "axios": "^1.7.7",
+    "pinia-orm": "^1.9.2"
   }
 }

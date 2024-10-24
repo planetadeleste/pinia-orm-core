@@ -1,28 +1,26 @@
 import { Model } from "@planetadeleste/pinia-orm-core";
+import { Attr } from "pinia-orm/decorators";
+import type { FileData } from "@planetadeleste/pinia-orm-core";
 
 class Brand extends Model {
   static entity = "sha_brands";
   static baseUrl = "brands";
   static namespace = "shopaholic";
 
-  static fields() {
-    return {
-      id: this.attr(""),
-      company_id: this.attr(""),
-      active: this.boolean(true),
-      name: this.attr(null),
-      slug: this.attr(null),
-      code: this.attr(null),
-      preview_text: this.attr(null),
-      preview_image: this.attr(null),
-      images: this.attr([]),
-      created_at: this.attr(null),
-      updated_at: this.attr(null),
-      external_id: this.attr(null),
-      description: this.attr(null),
-      sort_order: this.attr(0),
-    };
-  }
+  @Attr("") declare id: number | string;
+  @Attr("") declare company_id: number | string;
+  @Attr(true) declare active: boolean;
+  @Attr(null) declare name: string;
+  @Attr(null) declare slug: string;
+  @Attr(null) declare code: string;
+  @Attr(null) declare preview_text: string;
+  @Attr(null) declare preview_image: string;
+  @Attr(null) declare images: FileData[];
+  @Attr(null) declare created_at: string;
+  @Attr(null) declare updated_at: string;
+  @Attr(null) declare external_id: number;
+  @Attr(null) declare description?: string;
+  @Attr(0) declare sort_order?: string;
 }
 
 export default Brand;

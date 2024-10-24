@@ -2,6 +2,7 @@ import type { Result } from "@planetadeleste/pinia-orm-core";
 import { Model } from "@planetadeleste/pinia-orm-core";
 import type { Request } from "@pinia-orm/axios";
 import type { AxiosResponse } from "axios";
+import { Attr, HasMany, OnDelete } from "pinia-orm/decorators";
 import type { CategoryData } from "../types";
 
 class Category extends Model {
@@ -23,26 +24,24 @@ class Category extends Model {
     },
   };
 
-  static fields() {
-    return {
-      id: this.attr(""),
-      parent_id: this.attr(null),
-      company_id: this.attr(null),
-      active: this.boolean(true),
-      name: this.attr(null),
-      code: this.attr(null),
-      slug: this.attr(null),
-      preview_image: this.attr(null),
-      images: this.attr(null),
-      preview_text: this.attr(null),
-      description: this.attr(null),
-      external_id: this.attr(null),
-      created_at: this.attr(null),
-      updated_at: this.attr(null),
+  @Attr(null) declare id;
+  @Attr(null) declare parent_id: string;
+  @Attr(null) declare company_id: string;
+  @Attr(true) declare active: boolean;
+  @Attr(null) declare name: string;
+  @Attr(null) declare code: string;
+  @Attr(null) declare slug: string;
+  @Attr(null) declare preview_image: string;
+  @Attr(null) declare images: string;
+  @Attr(null) declare preview_text: string;
+  @Attr(null) declare description: string;
+  @Attr(null) declare external_id: string;
+  @Attr(null) declare created_at;
+  @Attr(null) declare updated_at;
 
-      children: this.hasMany(Category, "parent_id").onDelete("cascade"),
-    };
-  }
+  @HasMany(() => Category, "parent_id")
+  @OnDelete("cascade")
+  declare children: Category[];
 }
 
 export default Category;

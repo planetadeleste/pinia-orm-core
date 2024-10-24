@@ -1,4 +1,7 @@
+import type { FileData } from "@planetadeleste/pinia-orm-core";
 import { Model } from "@planetadeleste/pinia-orm-core";
+import { Attr, BelongsTo, HasMany, OnDelete, Bool } from "pinia-orm/decorators";
+import type { BrandData, CategoryData, OfferData } from "../types";
 import Brand from "./Brand";
 import Category from "./Category";
 import Offer from "./Offer";
@@ -8,30 +11,29 @@ class Product extends Model {
   static baseUrl = "products";
   static namespace = "shopaholic";
 
-  static fields() {
-    return {
-      id: this.attr(""),
-      active: this.boolean(true),
-      brand: this.belongsTo(Brand, "brand_id"),
-      brand_id: this.attr(null),
-      category: this.belongsTo(Category, "category_id"),
-      category_id: this.attr(null),
-      category_name: this.attr(null),
-      code: this.attr(null),
-      created_at: this.attr(null),
-      description: this.attr(null),
-      external_id: this.attr(null),
-      images: this.attr(null),
-      name: this.attr(null),
-      preview_image: this.attr(null),
-      preview_text: this.attr(null),
-      secondary_thumb: this.attr(null),
-      slug: this.attr(null),
-      thumbnail: this.attr(null),
-      updated_at: this.attr(null),
-      offers: this.hasMany(Offer, "product_id").onDelete("cascade"),
-    };
-  }
+  @Attr("") declare id: number | string;
+  @Attr(null) declare category_id: number;
+  @Attr(null) declare brand_id: number;
+  @Attr(null) declare slug: string;
+  @Attr(null) declare name: string;
+  @Attr(null) declare category_name: string;
+  @Attr(null) declare images: FileData[];
+  @Attr(null) declare preview_image: string;
+  @Attr(null) declare preview_text: string;
+  @Attr(null) declare created_at?: string;
+  @Attr(null) declare updated_at?: string;
+  @Bool(true) declare active: boolean;
+  @Attr(null) declare external_id: string;
+  @Attr(null) declare description: string;
+  @Attr(null) declare secondary_thumb: string;
+  @Attr(null) declare thumbnail: string;
+  @Attr(null) declare code: string;
+
+  @BelongsTo(() => Brand, "brand_id") declare brand: Brand;
+  @BelongsTo(() => Category, "category_id") declare category: Category;
+  @HasMany(() => Offer, "product_id")
+  @OnDelete("cascade")
+  declare offers: OfferData[];
 }
 
 export default Product;
