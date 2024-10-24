@@ -71,13 +71,13 @@ importers:
     dependencies:
       '@pinia-orm/axios':
         specifier: ^1.7.0
-        version: 1.7.0(axios@1.6.5)(pinia-orm@1.7.2(pinia@2.2.4(typescript@5.6.3)(vue@3.5.3(typescript@5.6.3))))
+        version: 1.9.2(axios@1.7.7)(pinia-orm@1.9.2(pinia@2.2.4(typescript@5.6.3)(vue@3.5.3(typescript@5.6.3))))(pinia@2.2.4(typescript@5.6.3)(vue@3.5.3(typescript@5.6.3)))
       axios:
         specifier: ^1.6.5
-        version: 1.6.5
+        version: 1.7.7
       pinia-orm:
         specifier: ^1.7.2
-        version: 1.7.2(pinia@2.2.4(typescript@5.6.3)(vue@3.5.3(typescript@5.6.3)))
+        version: 1.9.2(pinia@2.2.4(typescript@5.6.3)(vue@3.5.3(typescript@5.6.3)))
     devDependencies:
       '@planetadeleste/pinia-orm-core':
         specifier: workspace:*
@@ -895,21 +895,12 @@ packages:
     resolution: {integrity: sha512-nn5ozdjYQpUCZlWGuxcJY/KpxkWQs4DcbMCmKojjyrYDEAGy4Ce19NN4v5MduafTwJlbKc99UA8YhSVqq9yPZA==}
     engines: {node: '>=12.4.0'}
 
-  '@pinia-orm/axios@1.7.0':
-    resolution: {integrity: sha512-kw1A9U9pcQT2mz9yBPCGtppIXcBG06gXLjg/2eJfuCmPWcGnolcFad8V8HwwWja1GMvGlDGg7ZuNgR08Ic9tcA==}
-    peerDependencies:
-      axios: '>=1.5.0'
-      pinia-orm: '>=1.7.0'
-
   '@pinia-orm/axios@1.9.2':
     resolution: {integrity: sha512-xFyxm3wVyJXqoqDcaX2z4hEjfE88t3/h1HlOqniiwWybxsQ3IEujMchqhrBsHIkKX/mKw8DxTAV+9Ef58VblVg==}
     peerDependencies:
       axios: '>=1.7.2'
       pinia: '>=2.1.7'
       pinia-orm: '>=1.9.1'
-
-  '@pinia-orm/normalizr@1.7.0':
-    resolution: {integrity: sha512-WGH78S6yDmVYIsFltrbvsq9deyYKqqcsKIuPX5kgddTbkVErdg86Bk+dsuviAjg9g5mtnLGt4VSRbnls2Ldf5Q==}
 
   '@pinia-orm/normalizr@1.9.2':
     resolution: {integrity: sha512-EEIHFwvtllvhkud1ZrQyiWo2s31dhuq0BxG++yd/WwOOEQhPRNuKsWFpxKf02d3JTKcRAgXLNvSd8BXixe+I1w==}
@@ -1359,9 +1350,6 @@ packages:
   available-typed-arrays@1.0.7:
     resolution: {integrity: sha512-wvUjBtSGN7+7SjNpq/9M2Tg350UZD3q62IFZLbRAR1bSMlCo1ZaeW+BJ+D090e4hIIZLBcTDWe4Mh4jvUDajzQ==}
     engines: {node: '>= 0.4'}
-
-  axios@1.6.5:
-    resolution: {integrity: sha512-Ii012v05KEVuUoFWmMW/UQv9aRIc3ZwkWDcM+h5Il8izZCtRVpDUfwpoFf7eOtajT3QiGR4yDUx7lPqHJULgbg==}
 
   axios@1.7.7:
     resolution: {integrity: sha512-S4kL7XrjgBmvdGut0sN3yJxqYzrDOnivkBiN0OFs6hLiUam3UPvswUo0kqGyhqUZGEOytHyumEdXsAkgCOUf3Q==}
@@ -1987,15 +1975,6 @@ packages:
   flatted@3.3.1:
     resolution: {integrity: sha512-X8cqMLLie7KsNUDSdzeN8FYK9rEt4Dt67OsG/DNGnYTSDBG4uFAJFBnUeiV+zCVAvwFy56IjM9sH51jVaEhNxw==}
 
-  follow-redirects@1.15.4:
-    resolution: {integrity: sha512-Cr4D/5wlrb0z9dgERpUL3LrmPKVDsETIJhaCMeDfuFYcqa5bldGV6wBsAN6X/vxlXQtFBMrXdXxdL8CbDTGniw==}
-    engines: {node: '>=4.0'}
-    peerDependencies:
-      debug: '*'
-    peerDependenciesMeta:
-      debug:
-        optional: true
-
   follow-redirects@1.15.9:
     resolution: {integrity: sha512-gew4GsXizNgdoRyqmyfMHyAmXsZDk6mHkSxZFCzW9gwlbtOW44CDtYavM+y+72qD/Vq2l550kMF52DT8fOLJqQ==}
     engines: {node: '>=4.0'}
@@ -2011,10 +1990,6 @@ packages:
   foreground-child@3.3.0:
     resolution: {integrity: sha512-Ld2g8rrAyMYFXBhEqMz8ZAHBi4J4uS1i/CxGMDnjyFWddMXLVcDp051DZfu+t7+ab7Wv6SMqpWmyFIj5UbfFvg==}
     engines: {node: '>=14'}
-
-  form-data@4.0.0:
-    resolution: {integrity: sha512-ETEklSGi5t0QMZuiXoA/Q6vcnxcLQP5vdugSpuAyi6SVGi2clPPp+xgEhuMaHC+zGgn31Kd235W35f7Hykkaww==}
-    engines: {node: '>= 6'}
 
   form-data@4.0.1:
     resolution: {integrity: sha512-tzN8e4TX8+kkxGPK8D5u0FNmjPUjw3lwC9lSLxxoB/+GtsJG91CO8bSWy73APlgAZzZbXEYZJuxjkHH2w+Ezhw==}
@@ -2762,11 +2737,6 @@ packages:
   picomatch@4.0.2:
     resolution: {integrity: sha512-M7BAV6Rlcy5u+m6oPhAPFgJTzAioX/6B0DxyvDlo9l8+T3nLKbrczg2WLUyzd45L8RqfUMyGPzekbMvX2Ldkwg==}
     engines: {node: '>=12'}
-
-  pinia-orm@1.7.2:
-    resolution: {integrity: sha512-Ha2RcDN6UnoE0dkKKiauDTHA5LCQ3HEkA1vc1bELsJOARme6wCQQwZDlVNxtFi9KYlF3dwmvHhNzQ8YrCW89kA==}
-    peerDependencies:
-      pinia: ^2.1.6
 
   pinia-orm@1.9.2:
     resolution: {integrity: sha512-MSZAQjuuZSrJrkob3Yj2idAkV5BsmShVcOXtMor3vicBtmsPXd606vSQ3/yJTYde2jX3QmrLQp5i85AXianasw==}
@@ -4141,18 +4111,11 @@ snapshots:
 
   '@nolyfill/is-core-module@1.0.39': {}
 
-  '@pinia-orm/axios@1.7.0(axios@1.6.5)(pinia-orm@1.7.2(pinia@2.2.4(typescript@5.6.3)(vue@3.5.3(typescript@5.6.3))))':
-    dependencies:
-      axios: 1.6.5
-      pinia-orm: 1.7.2(pinia@2.2.4(typescript@5.6.3)(vue@3.5.3(typescript@5.6.3)))
-
   '@pinia-orm/axios@1.9.2(axios@1.7.7)(pinia-orm@1.9.2(pinia@2.2.4(typescript@5.6.3)(vue@3.5.3(typescript@5.6.3))))(pinia@2.2.4(typescript@5.6.3)(vue@3.5.3(typescript@5.6.3)))':
     dependencies:
       axios: 1.7.7
       pinia: 2.2.4(typescript@5.6.3)(vue@3.5.3(typescript@5.6.3))
       pinia-orm: 1.9.2(pinia@2.2.4(typescript@5.6.3)(vue@3.5.3(typescript@5.6.3)))
-
-  '@pinia-orm/normalizr@1.7.0': {}
 
   '@pinia-orm/normalizr@1.9.2': {}
 
@@ -4661,14 +4624,6 @@ snapshots:
   available-typed-arrays@1.0.7:
     dependencies:
       possible-typed-array-names: 1.0.0
-
-  axios@1.6.5:
-    dependencies:
-      follow-redirects: 1.15.4
-      form-data: 4.0.0
-      proxy-from-env: 1.1.0
-    transitivePeerDependencies:
-      - debug
 
   axios@1.7.7:
     dependencies:
@@ -5570,8 +5525,6 @@ snapshots:
 
   flatted@3.3.1: {}
 
-  follow-redirects@1.15.4: {}
-
   follow-redirects@1.15.9: {}
 
   for-each@0.3.3:
@@ -5582,12 +5535,6 @@ snapshots:
     dependencies:
       cross-spawn: 7.0.3
       signal-exit: 4.1.0
-
-  form-data@4.0.0:
-    dependencies:
-      asynckit: 0.4.0
-      combined-stream: 1.0.8
-      mime-types: 2.1.35
 
   form-data@4.0.1:
     dependencies:
@@ -6296,11 +6243,6 @@ snapshots:
   picomatch@2.3.1: {}
 
   picomatch@4.0.2: {}
-
-  pinia-orm@1.7.2(pinia@2.2.4(typescript@5.6.3)(vue@3.5.3(typescript@5.6.3))):
-    dependencies:
-      '@pinia-orm/normalizr': 1.7.0
-      pinia: 2.2.4(typescript@5.6.3)(vue@3.5.3(typescript@5.6.3))
 
   pinia-orm@1.9.2(pinia@2.2.4(typescript@5.6.3)(vue@3.5.3(typescript@5.6.3))):
     dependencies:

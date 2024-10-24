@@ -123,10 +123,6 @@ class Auth extends Model {
       },
     },
   };
-
-  static fields(): Record<string, any> {
-    return {};
-  }
 }
 
 export default Auth;
