@@ -36,13 +36,17 @@ class Cart extends Model {
         },
 
         async getData(this: Request) {
-          const obResponse = await this.get(`${Cart.baseUrl}/data`);
+          const obResponse = await this.get(`${Cart.baseUrl}/data`, {
+            save: false,
+          });
 
           return obResponse.response as AxiosResponse<Result<CartData>>;
         },
 
         async getItems(this: Request) {
-          const obResponse = await this.get(`${Cart.baseUrl}/get`);
+          const obResponse = await this.get(`${Cart.baseUrl}/get`, {
+            save: false,
+          });
 
           return obResponse.response as AxiosResponse<
             Result<CartComponentItemsData>
