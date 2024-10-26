@@ -13,6 +13,8 @@ class State extends Model {
   @Attr(null) declare name: string;
   @Attr(null) declare code: string;
   @Bool(false) declare is_default: boolean;
+  @Attr(null) declare created_at: string;
+  @Attr(null) declare updated_at: string;
 
   @BelongsTo(() => Country, "country_id") declare country: Country;
   @HasMany(() => Town, "state_id") declare towns: Town[];

@@ -1,1 +1,3 @@
-export { default } from '../../tsup.config';
+import configTsup from "../../tsup.config";
+
+export default configTsup("pinia-orm-location");
