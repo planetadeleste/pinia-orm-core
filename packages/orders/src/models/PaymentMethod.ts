@@ -11,6 +11,8 @@ class PaymentMethod extends Model {
   @Attr(null) declare code: string;
   @Attr(null) declare preview_text: string;
   @Attr(null) declare restriction: string;
+  @Attr(null) declare created_at: string;
+  @Attr(null) declare updated_at: string;
 }
 
 export default PaymentMethod;

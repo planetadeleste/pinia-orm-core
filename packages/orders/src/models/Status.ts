@@ -14,6 +14,8 @@ class Status extends Model {
   @Attr(null) declare is_user_show: string;
   @Attr(null) declare user_status_id: string;
   @Attr(null) declare color: string;
+  @Attr(null) declare created_at: string;
+  @Attr(null) declare updated_at: string;
 }
 
 export default Status;

@@ -13,8 +13,8 @@ class ShippingType extends Model {
   @Attr(null) declare preview_text: string;
   @Attr(null) declare property: Record<string, any>;
   @Attr(null) declare api_class: string;
-  @Attr(null) declare created_at?: string;
-  @Attr(null) declare updated_at?: string;
+  @Attr(null) declare created_at: string;
+  @Attr(null) declare updated_at: string;
 }
 
 export default ShippingType;
