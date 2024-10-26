@@ -20,8 +20,8 @@ class Product extends Model {
   @Attr(null) declare images: FileData[];
   @Attr(null) declare preview_image: string;
   @Attr(null) declare preview_text: string;
-  @Attr(null) declare created_at?: string;
-  @Attr(null) declare updated_at?: string;
+  @Attr(null) declare created_at: string;
+  @Attr(null) declare updated_at: string;
   @Bool(true) declare active: boolean;
   @Attr(null) declare external_id: string;
   @Attr(null) declare description: string;

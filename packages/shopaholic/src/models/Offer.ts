@@ -29,6 +29,8 @@ class Offer extends Model {
   @Attr(null) declare preview_image: string;
   @Attr(null) declare images: FileData[];
   @Attr({}) declare property: Record<string, any>;
+  @Attr(null) declare created_at: string;
+  @Attr(null) declare updated_at: string;
 
   @BelongsTo(() => Product, "product_id") declare product: Product;
 }

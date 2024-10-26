@@ -37,7 +37,7 @@ class Category extends Model {
   @Attr(null) declare description: string;
   @Attr(null) declare external_id: string;
   @Attr(null) declare created_at;
-  @Attr(null) declare updated_at;
+  @Attr(null) declare updated_at: string;
 
   @HasMany(() => Category, "parent_id")
   @OnDelete("cascade")

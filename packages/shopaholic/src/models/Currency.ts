@@ -14,8 +14,8 @@ class Currency extends Model {
   @Attr(null) declare code: string;
   @Attr(null) declare rate: string | number;
   @Attr(null) declare symbol: string;
-  @Attr(null) declare created_at?: string;
-  @Attr(null) declare updated_at?: string;
+  @Attr(null) declare created_at: string;
+  @Attr(null) declare updated_at: string;
 }
 
 export default Currency;
