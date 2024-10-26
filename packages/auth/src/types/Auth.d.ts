@@ -49,7 +49,6 @@ export interface AuthAxiosRepository extends Request {
   refresh(): Promise<AxiosResponse<Result<ResponseLoginRegisterData>>>;
 }
 
-// @ts-ignore
 export interface AuthApiAxiosRepository extends AxiosRepository<Auth> {
   api(): AuthAxiosRepository;
 }
