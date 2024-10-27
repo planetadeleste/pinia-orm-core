@@ -8,6 +8,7 @@ export type {
   CartComponentRemoveData,
   CartData,
   CartPositionData,
+  CartRemoveType,
   ItemPriceData,
   MakeOrderResponseData,
   OrderData,

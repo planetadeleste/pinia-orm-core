@@ -94,6 +94,7 @@ export interface CartPositionData {
 }
 
 export interface CartData {
+  id: number;
   position: CartPositionData[];
   shipping_price: ItemPriceData;
   position_total_price: TotalPriceContainerData;
@@ -110,6 +111,7 @@ export interface CartData {
 }
 
 export interface CartComponentPositionData {
+  id: number;
   offer: OfferData;
   product: ProductData;
   price: string;
@@ -119,6 +121,7 @@ export interface CartComponentPositionData {
   quantity: number;
   price_per_unit: string;
   price_per_unit_value: number;
+  property: Record<string, any>;
 }
 
 export interface CartComponentAddItemData {
@@ -135,8 +138,11 @@ export interface CartComponentAddData {
   return_data?: boolean;
 }
 
+export type CartRemoveType = "offer" | "position";
+
 export interface CartComponentRemoveData extends CartComponentAddData {
   cart: number[];
+  type?: CartRemoveType;
 }
 
 export interface CartComponentItemsData {
