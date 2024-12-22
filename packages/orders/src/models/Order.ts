@@ -1,7 +1,11 @@
+import type { Result } from "@planetadeleste/pinia-orm-core";
 import { Model } from "@planetadeleste/pinia-orm-core";
 import { Currency } from "@planetadeleste/pinia-orm-shopaholic";
 import { User } from "@planetadeleste/pinia-orm-auth";
 import { Attr, BelongsTo, HasMany } from "pinia-orm/decorators";
+import type { Request } from "@pinia-orm/axios";
+import type { AxiosResponse } from "axios";
+import type { MakeOrderResponseData, OrderRequestData } from "../types";
 import Status from "./Status";
 import OrderPosition from "./OrderPosition";
 import ShippingType from "./ShippingType";
@@ -11,6 +15,29 @@ class Order extends Model {
   static entity = "sha_order";
   static baseUrl = "orders";
   static namespace = "orders";
+
+  static config = {
+    axiosApi: {
+      actions: {
+        async makeOrder(
+          this: Request,
+          obData: OrderRequestData,
+        ): Promise<AxiosResponse<Result<MakeOrderResponseData>>> {
+          const obResponse = await this.post(
+            `${Order.baseUrl}/create`,
+            obData,
+            {
+              save: false,
+            },
+          );
+
+          return obResponse.response as AxiosResponse<
+            Result<MakeOrderResponseData>
+          >;
+        },
+      },
+    },
+  };
 
   @Attr("") declare id: number | string;
   @Attr(null) declare currency_id: number;

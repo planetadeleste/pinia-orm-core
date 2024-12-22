@@ -1,5 +1,9 @@
+import type { AxiosRepository, Request } from "@pinia-orm/axios";
+import type { AxiosResponse } from "axios";
+import type { Result } from "@planetadeleste/pinia-orm-core";
 import type { AddressData, UserData } from "@planetadeleste/pinia-orm-auth";
 import type { CurrencyData } from "@planetadeleste/pinia-orm-shopaholic";
+import type { Order } from "../index";
 import type { StatusData } from "./Status";
 import type { OrderPositionData } from "./OrderPosition";
 import type { ShippingTypeData } from "./ShippingType";
@@ -74,12 +78,22 @@ export interface OrderRequestUserData {
 export interface OrderRequestData {
   order: OrderRequestOrderData;
   user: OrderRequestUserData;
-  shipping_address: AddressData;
-  billing_address: AddressData;
+  shipping_address?: AddressData;
+  billing_address?: AddressData;
 }
 
 export interface MakeOrderResponseData {
   id: number | string;
   number: string;
   key: string;
+}
+
+export interface OrderAxiosRepository extends Request {
+  makeOrder(
+    obData: OrderRequestData,
+  ): Promise<AxiosResponse<Result<MakeOrderResponseData>>>;
+}
+
+export interface OrderApiAxiosRepository extends AxiosRepository<Order> {
+  api(): OrderAxiosRepository;
 }
