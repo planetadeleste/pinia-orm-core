@@ -16,6 +16,8 @@ export type {
   OrderRequestData,
   OrderRequestOrderData,
   OrderRequestUserData,
+  OrderApiAxiosRepository,
+  OrderAxiosRepository,
   PaymentMethodData,
   ShippingTypeData,
   StatusData,
