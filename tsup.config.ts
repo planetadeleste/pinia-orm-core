@@ -38,6 +38,7 @@ const configTsup = (sPackage: string, arImports: string[] = []) => {
       })
         .generate()
         .then(async (r: any) => {
+          console.log(r);
           console.log("Generate types");
 
           const arImportsList = [

@@ -2,7 +2,7 @@ import type { Result } from "@planetadeleste/pinia-orm-core";
 import { Model } from "@planetadeleste/pinia-orm-core";
 import { Currency } from "@planetadeleste/pinia-orm-shopaholic";
 import { User } from "@planetadeleste/pinia-orm-auth";
-import { Attr, BelongsTo, HasMany } from "pinia-orm/decorators";
+import { Attr, BelongsTo, HasMany, Str } from "pinia-orm/decorators";
 import type { Request } from "@pinia-orm/axios";
 import type { AxiosResponse } from "axios";
 import type { MakeOrderResponseData, OrderRequestData } from "../types";
@@ -54,6 +54,10 @@ class Order extends Model {
   @Attr(null) declare property: string;
   @Attr(null) declare secret_key: string;
   @Attr(null) declare weight: string;
+
+  // Accessors
+  @Str("") declare currency_symbol: string;
+  @Str("") declare total_price: string;
 
   @BelongsTo(() => Status, "status_id") declare status: Status;
   @BelongsTo(() => Currency, "currency_id") declare currency: Currency;
