@@ -69,7 +69,7 @@ class Order extends Model {
 
   @BelongsTo(() => User, "user_id") declare user: User;
   @HasMany(() => OrderPosition, "order_id")
-  declare order_position: OrderPosition;
+  declare order_position: OrderPosition[];
 }
 
 export default Order;
