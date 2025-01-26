@@ -7,7 +7,6 @@ import type {
   CartComponentAddData,
   CartComponentItemsData,
   CartComponentRemoveData,
-  CartData,
 } from "../types";
 
 class Cart extends Model {
@@ -31,7 +30,7 @@ class Cart extends Model {
           });
 
           return obResponse.response as AxiosResponse<
-            Result<CartData | CartComponentItemsData>
+            Result<Cart | CartComponentItemsData>
           >;
         },
 
@@ -40,7 +39,7 @@ class Cart extends Model {
             save: false,
           });
 
-          return obResponse.response as AxiosResponse<Result<CartData>>;
+          return obResponse.response as AxiosResponse<Result<Cart>>;
         },
 
         async getItems(this: Request) {
@@ -66,7 +65,7 @@ class Cart extends Model {
           });
 
           return obResponse.response as AxiosResponse<
-            Result<CartData | CartComponentItemsData>
+            Result<Cart | CartComponentItemsData>
           >;
         },
 
@@ -83,7 +82,7 @@ class Cart extends Model {
           });
 
           return obResponse.response as AxiosResponse<
-            Result<CartData | CartComponentItemsData>
+            Result<Cart | CartComponentItemsData>
           >;
         },
       },

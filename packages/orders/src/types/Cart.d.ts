@@ -1,7 +1,4 @@
-import type {
-  OfferData,
-  ProductData,
-} from "@planetadeleste/pinia-orm-shopaholic";
+import type { Offer, Product } from "@planetadeleste/pinia-orm-shopaholic";
 import type { AxiosRepository, Request } from "@pinia-orm/axios";
 import type { AxiosResponse } from "axios";
 import type { Result } from "@planetadeleste/pinia-orm-core";
@@ -93,27 +90,10 @@ export interface CartPositionData {
   property: Record<string, any>;
 }
 
-export interface CartData {
-  id: number;
-  position: CartPositionData[];
-  shipping_price: ItemPriceData;
-  position_total_price: TotalPriceContainerData;
-  total_price: TotalPriceContainerData;
-  quantity: number;
-  total_quantity: number;
-  weight: number;
-  payment_method_id: number;
-  shipping_type_id: number;
-  user_data: number;
-  shipping_address: number;
-  billing_address: number;
-  property: Record<string, any>;
-}
-
 export interface CartComponentPositionData {
   id: number;
-  offer: OfferData;
-  product: ProductData;
+  offer: Offer;
+  product: Product;
   price: string;
   currency: string;
   total: string;
@@ -165,12 +145,12 @@ export interface CartAxiosRepository extends Request {
   add(
     obData: CartComponentAddData,
     bReturnData: true,
-  ): Promise<AxiosResponse<Result<CartData>>>;
+  ): Promise<AxiosResponse<Result<Cart>>>;
 
   /**
    * Get cart data
    */
-  getData(): Promise<AxiosResponse<Result<CartData>>>;
+  getData(): Promise<AxiosResponse<Result<Cart>>>;
 
   /**
    * Get cart items
@@ -189,7 +169,7 @@ export interface CartAxiosRepository extends Request {
   remove(
     obData: CartComponentRemoveData,
     bReturnData: true,
-  ): Promise<AxiosResponse<Result<CartData>>>;
+  ): Promise<AxiosResponse<Result<Cart>>>;
 
   /**
    * Updates quantity of offers in cart
@@ -203,7 +183,7 @@ export interface CartAxiosRepository extends Request {
   update(
     obData: CartComponentAddData,
     bReturnData: true,
-  ): Promise<AxiosResponse<Result<CartData>>>;
+  ): Promise<AxiosResponse<Result<Cart>>>;
 }
 
 // @ts-ignore

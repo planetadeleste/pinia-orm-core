@@ -6,7 +6,6 @@ export type {
   CartComponentItemsData,
   CartComponentPositionData,
   CartComponentRemoveData,
-  CartData,
   CartPositionData,
   CartRemoveType,
   ItemPriceData,
