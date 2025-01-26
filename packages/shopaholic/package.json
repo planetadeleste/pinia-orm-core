@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@pinia-orm/axios": "^1.9.2",
-    "@planetadeleste/pinia-orm-core": "workspace:*",
+    "@planetadeleste/pinia-orm-core": "*",
     "axios": "^1.7.7",
     "pinia-orm": "^1.9.2"
   },
