@@ -1,7 +1,6 @@
 import type { FileData } from "@planetadeleste/pinia-orm-core";
 import { Model } from "@planetadeleste/pinia-orm-core";
 import { Attr, BelongsTo, Bool, HasMany, OnDelete } from "pinia-orm/decorators";
-import type { OfferData } from "../types";
 import Brand from "./Brand";
 import Category from "./Category";
 import Offer from "./Offer";
@@ -33,7 +32,7 @@ class Product extends Model {
   @BelongsTo(() => Category, "category_id") declare category: Category;
   @HasMany(() => Offer, "product_id")
   @OnDelete("cascade")
-  declare offers: OfferData[];
+  declare offers: Offer[];
 }
 
 export default Product;

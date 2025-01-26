@@ -1,12 +1,9 @@
 export {
-  AddressData,
   AddressUpdateResponse,
-  GroupData,
+  AuthApiAxiosRepository,
+  AuthAxiosRepository,
   ProfileData,
   ResponseCheck,
   ResponseCsrf,
   ResponseLoginRegisterData,
-  UserData,
-  AuthAxiosRepository,
-  AuthApiAxiosRepository,
 } from './types';

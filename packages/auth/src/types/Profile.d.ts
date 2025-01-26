@@ -1,4 +1,4 @@
-import type { AddressData } from "./Address";
+import type { Address } from '../index';
 
 export interface ProfileData {
   id: number;
@@ -11,7 +11,7 @@ export interface ProfileData {
   phone_list: string[];
   avatar: string;
   property: Record<string, any>;
-  address: AddressData[];
+  address: Address[];
   role: string;
   created_at?: string;
   updated_at?: string;

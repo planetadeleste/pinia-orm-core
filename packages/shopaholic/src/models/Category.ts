@@ -3,7 +3,6 @@ import { Model } from "@planetadeleste/pinia-orm-core";
 import type { Request } from "@pinia-orm/axios";
 import type { AxiosResponse } from "axios";
 import { Attr, HasMany, OnDelete } from "pinia-orm/decorators";
-import type { CategoryData } from "../types";
 
 class Category extends Model {
   static entity = "sha_categories";
@@ -14,11 +13,11 @@ class Category extends Model {
       actions: {
         async list(this: Request) {
           const obResponse = await this.get(`${Category.baseUrl}/list`);
-          return obResponse.response as AxiosResponse<Result<CategoryData[]>>;
+          return obResponse.response as AxiosResponse<Result<Category[]>>;
         },
         async tree(this: Request) {
           const obResponse = await this.get(`${Category.baseUrl}/tree`);
-          return obResponse.response as AxiosResponse<Result<CategoryData[]>>;
+          return obResponse.response as AxiosResponse<Result<Category[]>>;
         },
       },
     },

@@ -10,7 +10,7 @@ class Group extends Model {
   @Attr(null) declare name: string;
   @Attr(null) declare code: string;
   @Attr(null) declare description: string;
-  @Attr(null) declare created_at?: string;
+  @Attr(null) declare created_at: string;
   @Attr(null) declare updated_at?: string;
 }
 

@@ -26,7 +26,7 @@
     "build": "tsup"
   },
   "devDependencies": {
-    "@planetadeleste/pinia-orm-core": "*"
+    "@planetadeleste/pinia-orm-core": "^1.0.12"
   },
   "peerDependencies": {
     "@planetadeleste/pinia-orm-core": "^1.0.0",

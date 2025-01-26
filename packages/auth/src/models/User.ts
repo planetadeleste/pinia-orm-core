@@ -19,7 +19,7 @@ class User extends Model {
   @Attr(null) declare avatar: string;
   @Attr({}) declare property: Record<string, any>;
   @Attr(null) declare role: string;
-  @Attr(null) declare created_at?: string;
+  @Attr(null) declare created_at: string;
   @Attr(null) declare updated_at?: string;
   @Attr(null) declare deleted_at?: string;
   @Attr(null) declare activation_code: string;
