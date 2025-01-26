@@ -35,6 +35,7 @@ class OrderPosition extends Model {
   @Attr(null) declare discount_total_price_with_tax_value: number;
   @Attr(null) declare discount_total_price_without_tax: number;
   @Attr(null) declare discount_total_price_without_tax_value: number;
+
   @Attr(null) declare increase_total_price: number;
   @Attr(null) declare increase_total_price_per_unit: number;
   @Attr(null) declare increase_total_price_per_unit_value: number;
@@ -47,12 +48,14 @@ class OrderPosition extends Model {
   @Attr(null) declare increase_total_price_with_tax_value: number;
   @Attr(null) declare increase_total_price_without_tax: number;
   @Attr(null) declare increase_total_price_without_tax_value: number;
+
   @Attr(null) declare old_price: number;
   @Attr(null) declare old_price_value: number;
   @Attr(null) declare old_price_with_tax: number;
   @Attr(null) declare old_price_with_tax_value: number;
   @Attr(null) declare old_price_without_tax: number;
   @Attr(null) declare old_price_without_tax_value: number;
+
   @Attr(null) declare old_total_price: number;
   @Attr(null) declare old_total_price_per_unit: number;
   @Attr(null) declare old_total_price_per_unit_value: number;
@@ -65,11 +68,14 @@ class OrderPosition extends Model {
   @Attr(null) declare old_total_price_with_tax_value: number;
   @Attr(null) declare old_total_price_without_tax: number;
   @Attr(null) declare old_total_price_without_tax_value: number;
+
+  @Attr(null) declare price: number | string;
   @Attr(null) declare price_value: number;
   @Attr(null) declare price_with_tax: number;
   @Attr(null) declare price_with_tax_value: number;
   @Attr(null) declare price_without_tax: number;
   @Attr(null) declare price_without_tax_value: number;
+
   @Attr(null) declare tax_discount_total_price: number;
   @Attr(null) declare tax_discount_total_price_per_unit: number;
   @Attr(null) declare tax_discount_total_price_per_unit_value: number;
@@ -91,6 +97,7 @@ class OrderPosition extends Model {
   @Attr(null) declare tax_total_price_per_unit: number;
   @Attr(null) declare tax_total_price_per_unit_value: number;
   @Attr(null) declare tax_total_price_value: number;
+
   @Attr(null) declare total_price: number;
   @Attr(null) declare total_price_per_unit: number;
   @Attr(null) declare total_price_per_unit_value: number;
