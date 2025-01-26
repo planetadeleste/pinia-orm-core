@@ -1,4 +1,5 @@
 import { writeFileSync } from "node:fs";
+import { exec } from "node:child_process";
 import { defineConfig } from "tsup";
 import npmDts from "npm-dts";
 import { generateDeclaration } from "dets";
@@ -56,9 +57,23 @@ const configTsup = (sPackage: string, arImports: string[] = []) => {
             imports: arImportLibs,
           });
 
+          console.log("Write types");
           writeFileSync("dist/types.d.ts", content, "utf8");
           const cmd = `dets src/index.d.ts --name "@planetadeleste/${sPackage}/types" --out dist/types.d.ts --imports ${arImportLibs.map((sItem) => `"${sItem}"`).join(" ")}`;
-          console.log("Run command: " + cmd);
+          exec(cmd, (error, stdout, stderr) => {
+            if (error) {
+              console.log(`error: ${error.message}`);
+              return;
+            }
+
+            if (stderr) {
+              console.log(`stderr: ${stderr}`);
+              return;
+            }
+
+            console.log(stdout);
+          });
+          // console.log("Run command: " + cmd);
         });
     },
   });
