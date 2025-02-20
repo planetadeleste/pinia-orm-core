@@ -25,6 +25,8 @@ class User extends Model {
   @Attr(null) declare activation_code: string;
   @Attr(null) declare persist_code: string;
   @Attr(null) declare reset_password_code: string;
+  @Attr(null) declare password: string;
+  @Attr(null) declare password_confirmation: string;
   @Attr(null) declare permissions: string;
   @Attr(null) declare activated_at: string;
   @Attr(null) declare last_login: string;
