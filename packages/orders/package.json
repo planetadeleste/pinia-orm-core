@@ -1,6 +1,6 @@
 {
   "name": "@planetadeleste/pinia-orm-orders",
-  "version": "1.0.14",
+  "version": "1.0.15",
   "description": "",
   "repository": {
     "type": "git",
@@ -26,13 +26,13 @@
     "build": "tsup"
   },
   "devDependencies": {
-    "@planetadeleste/pinia-orm-auth": "^1.0.9",
-    "@planetadeleste/pinia-orm-core": "^1.0.13",
-    "@planetadeleste/pinia-orm-shopaholic": "^1.0.9"
+    "@planetadeleste/pinia-orm-auth": "^1.0.10",
+    "@planetadeleste/pinia-orm-core": "^1.0.14",
+    "@planetadeleste/pinia-orm-shopaholic": "^1.0.10"
   },
   "peerDependencies": {
     "@pinia-orm/axios": "^1.7.0",
-    "@planetadeleste/pinia-orm-core": "^1.0.0",
+    "@planetadeleste/pinia-orm-core": "^1.0.14",
     "axios": "^1.6.5",
     "pinia-orm": "^1.7.2"
   }

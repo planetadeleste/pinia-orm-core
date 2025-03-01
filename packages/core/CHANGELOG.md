@@ -1,7 +1,13 @@
 # Changelog
 
+## 1.0.14
+
+### Patch Changes
+
+- 31ecf08: Update packages.
 
 ## v1.0.9
+
 - Fix types
 
 ### 🏡 Chore
@@ -13,6 +19,6 @@
 - Alvaro Canepa ([@alvaro-canepa](http://github.com/alvaro-canepa))
 
 ## v1.0.8
+
 - Use tsup builder
 - Fix types on core package
-
