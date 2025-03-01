@@ -1,7 +1,4 @@
 {
-  "workspaces": [
-    "./packages/*"
-  ],
   "name": "@planetadeleste/pinia-orm-root",
   "version": "1.0.1",
   "description": "",
@@ -10,6 +7,9 @@
     "type": "git",
     "url": "https://github.com/planetadeleste/pinia-orm-core.git"
   },
+  "workspaces": [
+    "./packages/*"
+  ],
   "license": "MIT",
   "sideEffects": false,
   "type": "module",
@@ -38,6 +38,7 @@
     "test:types": "tsc --noEmit --skipLibCheck"
   },
   "devDependencies": {
+    "@changesets/cli": "^2.28.1",
     "@microsoft/api-extractor": "^7.51.1",
     "@types/lodash": "^4.17.16",
     "@types/node": "^20.17.22",

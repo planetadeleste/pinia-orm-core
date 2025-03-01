@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@planetadeleste/pinia-orm-auth": "^1.0.9",
-    "@planetadeleste/pinia-orm-core": "^1.0.12",
+    "@planetadeleste/pinia-orm-core": "^1.0.13",
     "@planetadeleste/pinia-orm-shopaholic": "^1.0.9"
   },
   "peerDependencies": {
