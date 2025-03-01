@@ -26,10 +26,10 @@
     "build": "tsup"
   },
   "devDependencies": {
-    "@pinia-orm/axios": "^1.10.1",
+    "@pinia-orm/axios": "^1.10.2",
     "@planetadeleste/pinia-orm-core": "^1.0.12",
-    "axios": "^1.7.9",
-    "pinia-orm": "^1.10.1"
+    "axios": "^1.8.1",
+    "pinia-orm": "^1.10.2"
   },
   "peerDependencies": {
     "@pinia-orm/axios": "^1.9.2",

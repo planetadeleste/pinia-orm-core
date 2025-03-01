@@ -26,9 +26,9 @@
     "build": "tsup"
   },
   "devDependencies": {
-    "@planetadeleste/pinia-orm-auth": "^1.0.6",
+    "@planetadeleste/pinia-orm-auth": "^1.0.9",
     "@planetadeleste/pinia-orm-core": "^1.0.12",
-    "@planetadeleste/pinia-orm-shopaholic": "^1.0.8"
+    "@planetadeleste/pinia-orm-shopaholic": "^1.0.9"
   },
   "peerDependencies": {
     "@pinia-orm/axios": "^1.7.0",
