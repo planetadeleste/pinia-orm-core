@@ -149,8 +149,8 @@ importers:
         specifier: ^1.0.16
         version: 1.0.16(@pinia-orm/axios@1.10.2(axios@1.8.4)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2))))(@vueuse/core@13.0.0(vue@3.5.13(typescript@5.8.2)))(axios@1.8.4)(lodash@4.17.21)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2))
       '@planetadeleste/pinia-orm-shopaholic':
-        specifier: ^1.0.10
-        version: 1.0.10(@pinia-orm/axios@1.10.2(axios@1.8.4)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2))))(@planetadeleste/pinia-orm-core@1.0.16(@pinia-orm/axios@1.10.2(axios@1.8.4)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2))))(@vueuse/core@13.0.0(vue@3.5.13(typescript@5.8.2)))(axios@1.8.4)(lodash@4.17.21)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(axios@1.8.4)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))
+        specifier: ^1.0.11
+        version: 1.0.11(@pinia-orm/axios@1.10.2(axios@1.8.4)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2))))(@planetadeleste/pinia-orm-core@1.0.16(@pinia-orm/axios@1.10.2(axios@1.8.4)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2))))(@vueuse/core@13.0.0(vue@3.5.13(typescript@5.8.2)))(axios@1.8.4)(lodash@4.17.21)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(axios@1.8.4)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))
 
   packages/shopaholic:
     devDependencies:
@@ -1025,13 +1025,13 @@ packages:
       pinia-orm: ^1.10.2
       vue: ^3.5.3
 
-  '@planetadeleste/pinia-orm-shopaholic@1.0.10':
-    resolution: {integrity: sha512-1jCVD6jcQyCkZf8Zl9AWlSjn2s/R5DGWjcvLexXaCle9Xqf7501y/SkjhTNamCTuY61NSqpTbJxKwPJ7rIcOng==, tarball: https://npm.pkg.github.com/download/@planetadeleste/pinia-orm-shopaholic/1.0.10/3550a29a71633bcdf83009195af046fc21dc9a29}
+  '@planetadeleste/pinia-orm-shopaholic@1.0.11':
+    resolution: {integrity: sha512-uF9a6bKG62wppr74ky+cupoxSjuS/y/JPdF8YVMVYnIrF7NuqNbESjjapBYeeDTE7eNA/LqtHdYokCjfB7tY5Q==, tarball: https://npm.pkg.github.com/download/@planetadeleste/pinia-orm-shopaholic/1.0.11/af56889db962ee2f46cbe99fb6e7ad9124b9f447}
     peerDependencies:
-      '@pinia-orm/axios': ^1.9.2
+      '@pinia-orm/axios': ^1.10.2
       '@planetadeleste/pinia-orm-core': ^1.0.14
-      axios: ^1.7.7
-      pinia-orm: ^1.9.2
+      axios: ^1.8.4
+      pinia-orm: ^1.10.2
 
   '@rollup/plugin-alias@5.1.1':
     resolution: {integrity: sha512-PR9zDb+rOzkRb2VD+EuKB7UC41vU5DIwZ5qqCpk0KJudcWAyi8rvYOhS7+L5aZCspw1stTViLgN5v6FF1p5cgQ==}
@@ -4929,7 +4929,7 @@ snapshots:
       uuid: 11.1.0
       vue: 3.5.13(typescript@5.8.2)
 
-  '@planetadeleste/pinia-orm-shopaholic@1.0.10(@pinia-orm/axios@1.10.2(axios@1.8.4)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2))))(@planetadeleste/pinia-orm-core@1.0.16(@pinia-orm/axios@1.10.2(axios@1.8.4)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2))))(@vueuse/core@13.0.0(vue@3.5.13(typescript@5.8.2)))(axios@1.8.4)(lodash@4.17.21)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(axios@1.8.4)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))':
+  '@planetadeleste/pinia-orm-shopaholic@1.0.11(@pinia-orm/axios@1.10.2(axios@1.8.4)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2))))(@planetadeleste/pinia-orm-core@1.0.16(@pinia-orm/axios@1.10.2(axios@1.8.4)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2))))(@vueuse/core@13.0.0(vue@3.5.13(typescript@5.8.2)))(axios@1.8.4)(lodash@4.17.21)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(axios@1.8.4)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))':
     dependencies:
       '@pinia-orm/axios': 1.10.2(axios@1.8.4)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))
       '@planetadeleste/pinia-orm-core': 1.0.16(@pinia-orm/axios@1.10.2(axios@1.8.4)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2))))(@vueuse/core@13.0.0(vue@3.5.13(typescript@5.8.2)))(axios@1.8.4)(lodash@4.17.21)(pinia-orm@1.10.2(pinia@3.0.1(typescript@5.8.2)(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2)))(vue@3.5.13(typescript@5.8.2))

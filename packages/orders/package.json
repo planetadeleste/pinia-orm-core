@@ -28,7 +28,7 @@
   "devDependencies": {
     "@planetadeleste/pinia-orm-auth": "^1.0.11",
     "@planetadeleste/pinia-orm-core": "^1.0.16",
-    "@planetadeleste/pinia-orm-shopaholic": "^1.0.10"
+    "@planetadeleste/pinia-orm-shopaholic": "^1.0.11"
   },
   "peerDependencies": {
     "@pinia-orm/axios": "^1.10.2",
