@@ -27,7 +27,7 @@
     "release": "changelogen --release && pnpm publish && git push --follow-tags"
   },
   "devDependencies": {
-    "@planetadeleste/pinia-orm-core": "^1.0.14"
+    "@planetadeleste/pinia-orm-core": "^1.0.16"
   },
   "peerDependencies": {
     "@pinia-orm/axios": "^1.10.2",
