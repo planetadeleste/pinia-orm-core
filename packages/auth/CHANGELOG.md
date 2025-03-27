@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.11
+
+[compare changes](https://github.com/planetadeleste/pinia-orm-core/compare/v1.0.16...v1.0.11)
+
 ## 1.0.10
 
 ### Patch Changes
