@@ -1,5 +1,17 @@
 # Changelog
 
+## v1.0.18
+
+[compare changes](https://github.com/planetadeleste/pinia-orm-core/compare/v1.0.17...v1.0.18)
+
+### 🏡 Chore
+
+- **release:** V1.0.11 ([9023930](https://github.com/planetadeleste/pinia-orm-core/commit/9023930))
+
+### ❤️ Contributors
+
+- Alvaro Canepa ([@alvaro-canepa](https://github.com/alvaro-canepa))
+
 ## v1.0.17
 
 [compare changes](https://github.com/planetadeleste/pinia-orm-core/compare/v1.0.11...v1.0.17)
