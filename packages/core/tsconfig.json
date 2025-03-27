@@ -1,5 +1,7 @@
 {
     "compilerOptions":{
+        "experimentalDecorators": true,
+        "emitDecoratorMetadata": true,
         "target":"ESNext",
         "module":"ESNext",
         "moduleResolution":"Bundler",
@@ -11,3 +13,4 @@
         "src"
     ]
 }
+    
