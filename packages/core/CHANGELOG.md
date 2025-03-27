@@ -1,5 +1,9 @@
 # Changelog
 
+## v1.0.16
+
+[compare changes](https://github.com/planetadeleste/pinia-orm-core/compare/@planetadeleste/pinia-orm-auth@1.0.10...v1.0.16)
+
 ## 1.0.14
 
 ### Patch Changes
