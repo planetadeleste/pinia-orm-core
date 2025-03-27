@@ -32,18 +32,18 @@
   },
   "devDependencies": {
     "@pinia-orm/axios": "^1.10.2",
-    "@vueuse/core": "^11.3.0",
+    "@vueuse/core": "^13.0.0",
     "vue": "^3.5.13"
   },
   "peerDependencies": {
-    "@pinia-orm/axios": "^1.9.2",
-    "@vueuse/core": "^11.0.3",
-    "axios": "^1.6.5",
+    "@pinia-orm/axios": "^1.10.2",
+    "@vueuse/core": "^13.0.0",
+    "axios": "^1.8.4",
     "lodash": "^4.17.21",
-    "pinia-orm": "^1.9.2",
+    "pinia-orm": "^1.10.2",
     "vue": "^3.5.3"
   },
   "dependencies": {
-    "uuid": "^9.0.1"
+    "uuid": "^11.1.0"
   }
 }

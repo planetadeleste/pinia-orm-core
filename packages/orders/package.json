@@ -31,9 +31,9 @@
     "@planetadeleste/pinia-orm-shopaholic": "^1.0.10"
   },
   "peerDependencies": {
-    "@pinia-orm/axios": "^1.7.0",
+    "@pinia-orm/axios": "^1.10.2",
     "@planetadeleste/pinia-orm-core": "^1.0.14",
-    "axios": "^1.6.5",
-    "pinia-orm": "^1.7.2"
+    "axios": "^1.8.4",
+    "pinia-orm": "^1.10.2"
   }
 }

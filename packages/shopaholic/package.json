@@ -28,13 +28,13 @@
   "devDependencies": {
     "@pinia-orm/axios": "^1.10.2",
     "@planetadeleste/pinia-orm-core": "^1.0.14",
-    "axios": "^1.8.1",
+    "axios": "^1.8.4",
     "pinia-orm": "^1.10.2"
   },
   "peerDependencies": {
-    "@pinia-orm/axios": "^1.9.2",
+    "@pinia-orm/axios": "^1.10.2",
     "@planetadeleste/pinia-orm-core": "^1.0.14",
-    "axios": "^1.7.7",
-    "pinia-orm": "^1.9.2"
+    "axios": "^1.8.4",
+    "pinia-orm": "^1.10.2"
   }
 }
